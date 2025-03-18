@@ -5,7 +5,7 @@ const lightAsh = Color(0xFF6F7384);
 const black = Colors.black;
 const ligthYellowLight = Color(0xFFFFF1B1);
 const white = Colors.white;
-const teal = Colors.teal;
+const teal = Color(0x68C292);
 
 final darkTheme = ThemeData(
   fontFamily: 'OdinRounded',

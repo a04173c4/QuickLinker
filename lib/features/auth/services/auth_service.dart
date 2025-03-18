@@ -22,7 +22,6 @@ class AuthService {
       required String role,
       required BuildContext context}) async {
     try {
-      print('$uri/signup');
       http.Response response = await http.post(
         Uri.parse('$uri/signup'),
         body: jsonEncode({
@@ -37,7 +36,6 @@ class AuthService {
       );
       print("INTIAL SIGN UP RESPONSE");
       print(response.body);
-      print('$uri/');
       http.Response currentUser = await http.get(
         Uri.parse('$uri/'),
         headers: <String, String>{
@@ -82,7 +80,7 @@ class AuthService {
                 (route) => false,
               );
             }
-            showSnackBar(context, 'تم إنشاء الحساب!');
+            showSnackBar(context, 'Account created!');
           });
     } catch (e) {
       print(e.toString());
@@ -95,7 +93,6 @@ class AuthService {
       required String email,
       required BuildContext context}) async {
     try {
-      print("$uri/login");
       http.Response response = await http.post(
         Uri.parse('$uri/login'),
         body: jsonEncode({'email': email, 'password': password}),
@@ -162,8 +159,11 @@ class AuthService {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String? token = prefs.getString('x-auth-token');
       print("gotten token is $token");
+      if (token == null) {
+        prefs.setString('x-auth-token', '');
+      }
 //  prefs.setString('x-auth-token', '');
-      if (token != '') {
+      if (token != '' && token != null) {
         http.Response userRes = await http.get(
           Uri.parse('$uri/'),
           headers: <String, String>{

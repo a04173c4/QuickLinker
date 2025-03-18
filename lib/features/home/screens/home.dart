@@ -26,19 +26,22 @@ class _HomeState extends State<Home> {
     final user = Provider.of<UserProvider>(context).user;
     return Scaffold(
       appBar: AppBar(
-        surfaceTintColor: Colors.transparent,
-
-       leading: Container(
-
-       decoration: const BoxDecoration(
-        image: DecorationImage(image: 
-        AssetImage("assets/images/elogo.png"),
-        fit: BoxFit.fitWidth
-        )
-       ),
-       ), 
-       title: Text("مرحباً ${user.profile.name}"),
+  surfaceTintColor: Colors.transparent,
+  title: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      Text("مرحباً ${user.profile.name}"),
+      SizedBox(
+        width: 80, // Adjust based on your logo aspect ratio
+        height: 40, // Match your logo's height
+        child: Image.asset(
+          "assets/images/elogo.png",
+          fit: BoxFit.contain, // Ensures proper scaling
+        ),
       ),
+    ],
+  ),
+),
       body: ListView(
         children: [
           SearchField(onFieldSubmitted: navigateToSearch),

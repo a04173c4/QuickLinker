@@ -81,7 +81,7 @@ class _SearchState extends State<Search> {
               );
             },
             child: Container(
-              margin: const EdgeInsets.only(right: 10),
+              margin: const EdgeInsets.only(left: 10),
               child: const Icon(Icons.home_outlined),
             ),
           ),

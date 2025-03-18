@@ -58,10 +58,9 @@ class _SignupState extends State<Signup> {
             ),
             RichText(
               text: TextSpan(
-                text: 'لديك حساب مسبقاً؟ ',
+                text: 'لديك حساب بالفعل؟ ',
                 style: TextStyle(
                     fontSize: 18,
-                    fontFamily: 'OdinRounded',
                     color: Theme.of(context).brightness == Brightness.light
                         ? ash
                         : lightAsh),
@@ -84,11 +83,11 @@ class _SignupState extends State<Signup> {
                   TextFormField(
                     controller: emailController,
                     decoration: const InputDecoration(
-                      hintText: 'ادخل بريد الكتروني',
+                      hintText: 'أدخل الايميل',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'من فضلك، ادخل بريد الكتروني';
+                        return 'من فضلك، أدخل الايميل';
                       }
                       return null; //means input has been validated
                     },
@@ -98,11 +97,11 @@ class _SignupState extends State<Signup> {
                     controller: passwordController,
                     obscureText: true,
                     decoration: const InputDecoration(
-                      hintText: 'ادخل كلمة السر الجديدة',
+                      hintText: 'أدخل كلمة السر',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'من فضلك، ادخل كلمة المرور';
+                        return 'من فضلك، أدخل كلمة السر';
                       }
                       return null; //means input has been validated
                     },
@@ -112,7 +111,7 @@ class _SignupState extends State<Signup> {
                     controller: phoneController,
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                      hintText: 'ادخل رقم هاتفك',
+                      hintText: 'أدخل رقم هاتفك',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -150,7 +149,7 @@ class _SignupState extends State<Signup> {
                     },
                     child: const Text(
                       'إنشاء حساب',
-                      style: TextStyle(fontSize: 20, fontFamily: 'OdinRounded',),
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ],

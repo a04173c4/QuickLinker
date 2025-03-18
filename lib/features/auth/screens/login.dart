@@ -59,7 +59,6 @@ class _LoginState extends State<Login> {
                 text: "ليس لديك حساب؟ ",
                 style: TextStyle(
                     fontSize: 18,
-                    fontFamily: 'OdinRounded',
                     color: Theme.of(context).brightness == Brightness.light
                         ? ash
                         : lightAsh),
@@ -82,11 +81,11 @@ class _LoginState extends State<Login> {
                   TextFormField(
                     controller: emailController,
                     decoration: const InputDecoration(
-                      hintText: 'ادخل بريدك الالكتروني',
+                      hintText: 'ادخل ايميلك',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'من فضلك، ادخل بريدك الالكتروني';
+                        return 'من فضلك، أدخل ايميلك';
                       }
                       return null; //means input has been validated
                     },
@@ -96,11 +95,11 @@ class _LoginState extends State<Login> {
                     controller: passwordController,
                     obscureText: true,
                     decoration: const InputDecoration(
-                      hintText: 'ادخل كلمة المرور الخاصة بك',
+                      hintText: 'أدخل كلمة المرور الخاصة بك',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'من فضلك، ادخل كلمة المرور الخاصة بك';
+                        return 'من فضلك، أدخل كلمة المرور الخاصة بك';
                       }
                       return null; //means input has been validated
                     },
@@ -115,7 +114,7 @@ class _LoginState extends State<Login> {
                     },
                     child: const Text(
                       'تسجيل الدخول',
-                      style: TextStyle(fontSize: 20, fontFamily: 'OdinRounded',),
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ],
