@@ -27,19 +27,41 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
   surfaceTintColor: Colors.transparent,
-  title: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Text("مرحباً ${user.profile.name}"),
-      SizedBox(
-        width: 80, // Adjust based on your logo aspect ratio
-        height: 40, // Match your logo's height
-        child: Image.asset(
-          "assets/images/elogo.png",
-          fit: BoxFit.contain, // Ensures proper scaling
+  toolbarHeight: 80, // Reduced height for better density
+  titleSpacing: 0, // Remove default title padding
+  automaticallyImplyLeading: false, // Remove back arrow space
+  elevation: 0,
+  scrolledUnderElevation: 0,
+  title: Container(
+    padding: const EdgeInsets.symmetric(horizontal: 16), // Controlled padding
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        // Text with minimal padding
+        Padding(
+          padding: const EdgeInsets.only(right: 12), // Reduced right spacing
+          child: Text(
+            "مرحباً ${user.profile.name}",
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
         ),
-      ),
-    ],
+        
+        // Logo with tight constraints
+        ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: 300, // Reduced max width
+            maxHeight: 120, // Height matching toolbar density
+          ),
+          child: Image.asset(
+            "assets/images/elogo-full.png",
+            fit: BoxFit.contain,
+            alignment: Alignment.topCenter,
+          ),
+        ),
+      ],
+    ),
   ),
 ),
       body: ListView(
