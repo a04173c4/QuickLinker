@@ -1,12 +1,12 @@
-import 'package:multivendorplatformmobile/features/common/widgets/bottom_navbar.dart';
-import 'package:multivendorplatformmobile/features/products/screens/product_details.dart';
-import 'package:multivendorplatformmobile/features/search/services/search_service.dart';
-import 'package:multivendorplatformmobile/features/search/widgets/search_field.dart';
-import 'package:multivendorplatformmobile/features/search/widgets/searched_product.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/seller.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
+import 'package:quicklinker/features/common/widgets/bottom_navbar.dart';
+import 'package:quicklinker/features/products/screens/product_details.dart';
+import 'package:quicklinker/features/search/services/search_service.dart';
+import 'package:quicklinker/features/search/widgets/search_field.dart';
+import 'package:quicklinker/features/search/widgets/searched_product.dart';
+import 'package:quicklinker/features/seller/screens/seller.dart';
+import 'package:quicklinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class SearchSellerProducts extends StatefulWidget {
@@ -91,7 +91,9 @@ class _SearchSellerProductsState extends State<SearchSellerProducts> {
       ),
       body: products == null
           ? const Center(
-              child: CircularProgressIndicator(color: teal,),
+              child: CircularProgressIndicator(
+                color: teal,
+              ),
             )
           : products!.isEmpty
               ? Center(
@@ -105,7 +107,9 @@ class _SearchSellerProductsState extends State<SearchSellerProducts> {
                       icon: Icon(isAscending
                           ? Icons.arrow_upward
                           : Icons.arrow_downward),
-                      label: Text(isAscending ? "من الأدنى للأعلى" : "من الأعلى للأدنى"),
+                      label: Text(isAscending
+                          ? "من الأدنى للأعلى"
+                          : "من الأعلى للأدنى"),
                     ),
 
                     const SizedBox(height: 10),

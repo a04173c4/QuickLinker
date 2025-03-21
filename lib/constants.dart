@@ -16,23 +16,6 @@ class OnboardingContent {
       {required this.image, required this.title, required this.description});
 }
 
-List<OnboardingContent> contents = [
-  OnboardingContent(
-      title: 'منتجات عالية الجودة',
-      image: 'assets/images/eonb1.png',
-      description:
-          "مثال 1"),
-  OnboardingContent(
-      title: 'إجراء المدفوعات',
-      image: 'assets/images/eonb2.png',
-      description:
-          "مثال 2"),
-  OnboardingContent(
-      title: 'احصل على طلبك',
-      image: 'assets/images/eonb3.png',
-      description:
-          "مثال 3"),
-];
 
 const Map<String, Color> colorDictionary = {
   "black": Colors.black,

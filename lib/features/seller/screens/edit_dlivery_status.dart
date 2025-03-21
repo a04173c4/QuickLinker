@@ -1,8 +1,8 @@
 // ignore_for_file: use_build_context_synchronously
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/models/order.dart';
-import 'package:multivendorplatformmobile/features/products/services/product_details_service.dart';
-import 'package:multivendorplatformmobile/features/seller/services/seller_service.dart';
+import 'package:quicklinker/features/models/order.dart';
+import 'package:quicklinker/features/products/services/product_details_service.dart';
+import 'package:quicklinker/features/seller/services/seller_service.dart';
 
 class EditDliveryStatus extends StatefulWidget {
   const EditDliveryStatus({super.key, required this.order});
@@ -33,7 +33,10 @@ class _EditDliveryStatusState extends State<EditDliveryStatus> {
           children: [
             Text(
               "حالة الطلب الحالية: ${widget.order.status}",
-              style: const TextStyle(fontSize: 22, fontFamily: 'OdinRounded',),
+              style: const TextStyle(
+                fontSize: 22,
+                fontFamily: 'OdinRounded',
+              ),
             ),
             const SizedBox(
               height: 40,

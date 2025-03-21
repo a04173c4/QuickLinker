@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:multivendorplatformmobile/features/models/order.dart';
-import 'package:multivendorplatformmobile/features/orders/screens/order_details.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/edit_dlivery_status.dart';
-import 'package:multivendorplatformmobile/features/seller/services/seller_service.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/models/order.dart';
+import 'package:quicklinker/features/orders/screens/order_details.dart';
+import 'package:quicklinker/features/seller/screens/edit_dlivery_status.dart';
+import 'package:quicklinker/features/seller/services/seller_service.dart';
+import 'package:quicklinker/theme.dart';
 
 class Sales extends StatefulWidget {
   const Sales({super.key});
@@ -81,9 +81,10 @@ class _SalesState extends State<Sales> {
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(18),
-                          color: Theme.of(context).brightness == Brightness.light
-                              ? lightAsh
-                              : ash,
+                          color:
+                              Theme.of(context).brightness == Brightness.light
+                                  ? lightAsh
+                                  : ash,
                         ),
                         margin: const EdgeInsets.all(8),
                         child: Column(
@@ -92,7 +93,10 @@ class _SalesState extends State<Sales> {
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 "رقم الطلب: ${order.orderId}",
-                                style: const TextStyle(fontSize: 18, fontFamily: 'OdinRounded',),
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontFamily: 'OdinRounded',
+                                ),
                               ),
                             ),
                             Align(
@@ -103,8 +107,10 @@ class _SalesState extends State<Sales> {
                                   IconButton(
                                     icon: const Icon(Icons.edit),
                                     onPressed: () {
-                                      Navigator.of(context).push(MaterialPageRoute(
-                                        builder: (context) => EditDliveryStatus(order: order),
+                                      Navigator.of(context)
+                                          .push(MaterialPageRoute(
+                                        builder: (context) =>
+                                            EditDliveryStatus(order: order),
                                       ));
                                     },
                                   ),
@@ -121,7 +127,10 @@ class _SalesState extends State<Sales> {
                                     ),
                                     child: Text(
                                       order.status,
-                                      style: const TextStyle(fontSize: 17, fontFamily: 'OdinRounded',),
+                                      style: const TextStyle(
+                                        fontSize: 17,
+                                        fontFamily: 'OdinRounded',
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -131,7 +140,10 @@ class _SalesState extends State<Sales> {
                               alignment: Alignment.bottomRight,
                               child: Text(
                                 "التاريخ: ${order.date}",
-                                style: const TextStyle(fontSize: 17, fontFamily: 'OdinRounded',),
+                                style: const TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'OdinRounded',
+                                ),
                               ),
                             ),
                             const Divider(thickness: 0.4),
@@ -139,7 +151,10 @@ class _SalesState extends State<Sales> {
                               alignment: Alignment.center,
                               child: Text(
                                 "إجمالي المبلغ المدفوع: ${order.amount.toString()}",
-                                style: const TextStyle(fontSize: 20, fontFamily: 'OdinRounded',),
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'OdinRounded',
+                                ),
                               ),
                             ),
                           ],

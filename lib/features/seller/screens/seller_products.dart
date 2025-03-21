@@ -3,14 +3,14 @@
 import 'dart:convert';
 
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/empty.dart';
-import 'package:multivendorplatformmobile/features/models/user.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/add_product.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/edit_product.dart';
-import 'package:multivendorplatformmobile/features/seller/services/seller_service.dart';
+import 'package:quicklinker/features/common/widgets/empty.dart';
+import 'package:quicklinker/features/models/user.dart';
+import 'package:quicklinker/features/seller/screens/add_product.dart';
+import 'package:quicklinker/features/seller/screens/edit_product.dart';
+import 'package:quicklinker/features/seller/services/seller_service.dart';
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/providers/user_provider.dart';
+import 'package:quicklinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class SellerProducts extends StatefulWidget {

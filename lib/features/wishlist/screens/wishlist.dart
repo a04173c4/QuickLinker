@@ -1,7 +1,7 @@
-import 'package:multivendorplatformmobile/features/common/widgets/empty.dart';
-import 'package:multivendorplatformmobile/features/search/screens/search.dart';
-import 'package:multivendorplatformmobile/features/wishlist/widgets/wishlist_item.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
+import 'package:quicklinker/features/common/widgets/empty.dart';
+import 'package:quicklinker/features/search/screens/search.dart';
+import 'package:quicklinker/features/wishlist/widgets/wishlist_item.dart';
+import 'package:quicklinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +24,11 @@ class _WishlistState extends State<Wishlist> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("قائمة رغبات ${user.profile.name}",overflow: TextOverflow.ellipsis,maxLines: 1,),
+        title: Text(
+          "قائمة رغبات ${user.profile.name}",
+          overflow: TextOverflow.ellipsis,
+          maxLines: 1,
+        ),
       ),
       body: Column(
         mainAxisAlignment: user.wishlist.isEmpty
@@ -42,10 +46,7 @@ class _WishlistState extends State<Wishlist> {
                   itemCount: user.wishlist.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    
-                    return WishlistItem(
-                      item: user.wishlist[index]
-                    );
+                    return WishlistItem(item: user.wishlist[index]);
                   },
                 ),
         ],

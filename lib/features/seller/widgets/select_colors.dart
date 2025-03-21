@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/theme.dart';
 
 class SelectColors extends StatefulWidget {
   final List<String> items;
@@ -24,7 +24,6 @@ class _SelectColorsState extends State<SelectColors> {
     print(_selectedItems);
   }
 
-
 // this function is called when the Submit button is tapped
   void _submit() {
     Navigator.pop(context, _selectedItems);
@@ -38,13 +37,10 @@ class _SelectColorsState extends State<SelectColors> {
         child: Column(
           children: widget.items
               .map((item) => CheckboxListTile(
-                checkColor: teal,
-                
+                    checkColor: teal,
                     value: _selectedItems.contains(item),
                     title: ListTile(
-                      
                       hoverColor: colorDictionary[item],
-
                       title: Text(item),
                     ),
                     onChanged: (isChecked) =>
@@ -54,7 +50,6 @@ class _SelectColorsState extends State<SelectColors> {
         ),
       ),
       actions: [
-
         ElevatedButton(
           onPressed: _submit,
           child: const Text('أرسل'),
@@ -63,4 +58,3 @@ class _SelectColorsState extends State<SelectColors> {
     );
   }
 }
-

@@ -1,17 +1,17 @@
 // ignore_for_file: avoid_print
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/features/models/product.dart';
-import 'package:multivendorplatformmobile/features/products/services/product_details_service.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/features/models/product.dart';
+import 'package:quicklinker/features/products/services/product_details_service.dart';
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/products/widgets/dialogs/cart_colors_exceeded.dart';
-import 'package:multivendorplatformmobile/features/products/widgets/dialogs/cart_sizes_exceeded.dart';
-import 'package:multivendorplatformmobile/features/products/widgets/dialogs/select_colors_dialog.dart';
-import 'package:multivendorplatformmobile/features/products/widgets/dialogs/select_sizes_dialog.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/seller_profile.dart';
-import 'package:multivendorplatformmobile/features/wishlist/services/wishlist_service.dart';
-import 'package:multivendorplatformmobile/theme.dart';
-import 'package:multivendorplatformmobile/utils.dart';
+import 'package:quicklinker/features/products/widgets/dialogs/cart_colors_exceeded.dart';
+import 'package:quicklinker/features/products/widgets/dialogs/cart_sizes_exceeded.dart';
+import 'package:quicklinker/features/products/widgets/dialogs/select_colors_dialog.dart';
+import 'package:quicklinker/features/products/widgets/dialogs/select_sizes_dialog.dart';
+import 'package:quicklinker/features/seller/screens/seller_profile.dart';
+import 'package:quicklinker/features/wishlist/services/wishlist_service.dart';
+import 'package:quicklinker/theme.dart';
+import 'package:quicklinker/utils.dart';
 
 class ProductDetails extends StatefulWidget {
   static const String routeName = '/product-details';
@@ -32,7 +32,7 @@ class _ProductDetailsState extends State<ProductDetails> {
   List<String> selectedColors = [];
   List<String> selectedSizes = [];
   Map<String, int> selectedColorsDict = {};
-    Map<String, int> selectedSizessDict = {};
+  Map<String, int> selectedSizessDict = {};
 
   int quantity = 1;
   bool isReadMore = false;
@@ -298,10 +298,12 @@ class _ProductDetailsState extends State<ProductDetails> {
               child: Text(
                 "الكمية",
                 style: TextStyle(
-                    color: Theme.of(context).brightness == Brightness.light
-                        ? ash
-                        : lightAsh,
-                    fontSize: 18, fontFamily: 'OdinRounded',),
+                  color: Theme.of(context).brightness == Brightness.light
+                      ? ash
+                      : lightAsh,
+                  fontSize: 18,
+                  fontFamily: 'OdinRounded',
+                ),
               ),
             ),
             Row(
@@ -332,7 +334,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             quantity.toString(),
-                            style: const TextStyle(fontSize: 20, fontFamily: 'OdinRounded',),
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontFamily: 'OdinRounded',
+                            ),
                           ),
                         ),
                         GestureDetector(
@@ -360,18 +365,22 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ),
               ],
             ),
-            widget.product.colors.isNotEmpty?const Text("انقر نقرًا مزدوجًا لتحديد الحجم/اللون وانقر لإلغاء التحديد"):const SizedBox.shrink(),
+            widget.product.colors.isNotEmpty
+                ? const Text(
+                    "انقر نقرًا مزدوجًا لتحديد الحجم/اللون وانقر لإلغاء التحديد")
+                : const SizedBox.shrink(),
             widget.product.colors.isNotEmpty
                 ? Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "الألوان المتاحة",
                       style: TextStyle(
-                          color:
-                              Theme.of(context).brightness == Brightness.light
-                                  ? ash
-                                  : lightAsh,
-                          fontSize: 18, fontFamily: 'OdinRounded',),
+                        color: Theme.of(context).brightness == Brightness.light
+                            ? ash
+                            : lightAsh,
+                        fontSize: 18,
+                        fontFamily: 'OdinRounded',
+                      ),
                     ),
                   )
                 : const SizedBox.shrink(),
@@ -396,22 +405,18 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 selectedColors.add(color);
                                 selectedColorsDict[color] =
                                     (selectedColorsDict[color] ?? 0) + 1;
-                                    setState(() {
-                                      
-                                    });
+                                setState(() {});
                               }
                               print(selectedColors);
                             },
                             onTap: () {
                               if (selectedColors.contains(color)) {
                                 selectedColors.remove(color);
-                                selectedColorsDict[color] = (selectedColorsDict[color] ?? 0) - 1;
-                                setState(() {
-                                  
-                                });
+                                selectedColorsDict[color] =
+                                    (selectedColorsDict[color] ?? 0) - 1;
+                                setState(() {});
                               } else {
-                                showSnackBar(context,
-                                    'لم يتم تحديد هذا اللون');
+                                showSnackBar(context, 'لم يتم تحديد هذا اللون');
                               }
                               print(selectedColors);
                             },
@@ -429,9 +434,17 @@ class _ProductDetailsState extends State<ProductDetails> {
                                           ? colorDictionary[color.toLowerCase()]
                                           : white,
                                     ),
-                                    child:  Center(child: Text(selectedColorsDict[color].toString()=="null"?"0":selectedColorsDict[color].toString(),style: TextStyle(
-                                      color: color=="white"?black:white
-                                    ),)),
+                                    child: Center(
+                                        child: Text(
+                                      selectedColorsDict[color].toString() ==
+                                              "null"
+                                          ? "0"
+                                          : selectedColorsDict[color]
+                                              .toString(),
+                                      style: TextStyle(
+                                          color:
+                                              color == "white" ? black : white),
+                                    )),
                                   ),
                                   Text(
                                     color,
@@ -476,7 +489,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 onTap: () {
                                   if (selectedSizes.contains(size)) {
                                     selectedSizes.remove(size);
-                                    
                                   } else {
                                     showSnackBar(
                                         context, 'لم يتم تحديد هذا الحجم');
@@ -536,7 +548,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                           children: [
                             const Text(
                               'أضف إلى قائمة الرغبات ',
-                              style: TextStyle(fontSize: 18, fontFamily: 'OdinRounded',),
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontFamily: 'OdinRounded',
+                              ),
                             ),
                             Image.asset("assets/images/shopping-cart.png")
                           ],
@@ -559,7 +574,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                           children: [
                             const Text(
                               'أضافة إلى السلة ',
-                              style: TextStyle(fontSize: 18, fontFamily: 'OdinRounded',),
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontFamily: 'OdinRounded',
+                              ),
                             ),
                             Image.asset("assets/images/shopping-cart.png")
                           ],

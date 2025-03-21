@@ -1,12 +1,12 @@
 // import 'package:flutter/material.dart';
-// import 'package:multivendorplatformmobile/constants.dart';
-// import 'package:multivendorplatformmobile/features/home/screens/categories.dart';
-// import 'package:multivendorplatformmobile/features/orders/screens/orders.dart';
-// import 'package:multivendorplatformmobile/features/products/screens/cart.dart';
-// import 'package:multivendorplatformmobile/features/seller/screens/sales.dart';
-// import 'package:multivendorplatformmobile/features/seller/screens/seller_products.dart';
-// import 'package:multivendorplatformmobile/providers/user_provider.dart';
-// import 'package:multivendorplatformmobile/theme.dart';
+// import 'package:quicklinker/constants.dart';
+// import 'package:quicklinker/features/home/screens/categories.dart';
+// import 'package:quicklinker/features/orders/screens/orders.dart';
+// import 'package:quicklinker/features/products/screens/cart.dart';
+// import 'package:quicklinker/features/seller/screens/sales.dart';
+// import 'package:quicklinker/features/seller/screens/seller_products.dart';
+// import 'package:quicklinker/providers/user_provider.dart';
+// import 'package:quicklinker/theme.dart';
 // import 'package:badges/badges.dart' as badges;
 // import 'package:provider/provider.dart';
 
@@ -115,7 +115,7 @@
 //             ),
 //             child: badges.Badge(
 //               badgeStyle: const badges.BadgeStyle(
-                
+
 //                 badgeColor: teal,
 //               ),
 //               badgeContent: Text(Provider.of<UserProvider>(context)

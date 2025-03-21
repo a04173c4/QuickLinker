@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/splash.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
-import 'package:multivendorplatformmobile/router.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/common/widgets/splash.dart';
+import 'package:quicklinker/providers/user_provider.dart';
+import 'package:quicklinker/router.dart';
+import 'package:quicklinker/theme.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -38,14 +38,14 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: GlobalMaterialLocalizations.delegates,
-      supportedLocales: const [Locale('ar')],
-      locale: const Locale('ar'),
-      title: 'QuickLinker',
-      debugShowCheckedModeBanner: false,
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      onGenerateRoute: (settings) => generateRoute(settings),
-      home:const Splash());
+        localizationsDelegates: GlobalMaterialLocalizations.delegates,
+        supportedLocales: const [Locale('ar')],
+        locale: const Locale('ar'),
+        title: 'QuickLinker',
+        debugShowCheckedModeBanner: false,
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        onGenerateRoute: (settings) => generateRoute(settings),
+        home: const Splash());
   }
 }

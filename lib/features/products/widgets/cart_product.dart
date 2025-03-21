@@ -1,9 +1,9 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:multivendorplatformmobile/features/models/product.dart';
-import 'package:multivendorplatformmobile/features/products/screens/product_details.dart';
-import 'package:multivendorplatformmobile/features/products/services/product_details_service.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
+import 'package:quicklinker/features/models/product.dart';
+import 'package:quicklinker/features/products/screens/product_details.dart';
+import 'package:quicklinker/features/products/services/product_details_service.dart';
+import 'package:quicklinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -122,7 +122,9 @@ class _CartProductState extends State<CartProduct> {
                     width: 235,
                     padding: const EdgeInsets.only(left: 10, top: 5),
                     child: Text(
-                      colors!.isNotEmpty ? 'الألوان: $result' : "${cartItem.amount} في السلة",
+                      colors!.isNotEmpty
+                          ? 'الألوان: $result'
+                          : "${cartItem.amount} في السلة",
                       style: const TextStyle(
                         color: Colors.teal,
                       ),
@@ -138,12 +140,12 @@ class _CartProductState extends State<CartProduct> {
           children: [
             const Spacer(),
             ElevatedButton(
-              onPressed: () async{
+              onPressed: () async {
                 // editCart(cartItem.product, false);
                 Product product = await productDetailsService.getProduct(
                     cartItem.product.id, context);
-                Navigator.of(context).pushNamed(ProductDetails.routeName,
-                    arguments: product);
+                Navigator.of(context)
+                    .pushNamed(ProductDetails.routeName, arguments: product);
               },
               child: const Text('تعديل'),
             ),

@@ -3,13 +3,13 @@
 import 'dart:convert';
 
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/empty.dart';
-import 'package:multivendorplatformmobile/features/models/user.dart';
-import 'package:multivendorplatformmobile/features/orders/services/order_service.dart';
-import 'package:multivendorplatformmobile/features/products/widgets/cart_product.dart';
-import 'package:multivendorplatformmobile/features/search/screens/search.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/features/common/widgets/empty.dart';
+import 'package:quicklinker/features/models/user.dart';
+import 'package:quicklinker/features/orders/services/order_service.dart';
+import 'package:quicklinker/features/products/widgets/cart_product.dart';
+import 'package:quicklinker/features/search/screens/search.dart';
+import 'package:quicklinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
@@ -136,7 +136,10 @@ class _CartState extends State<Cart> {
                   child: TextButton(
                     child: Text(
                       'الدفع \$$total (${user.cart.length} أغراض)',
-                      style: const TextStyle(fontSize: 18, fontFamily: 'OdinRounded',),
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'OdinRounded',
+                      ),
                     ),
                     onPressed: () async {
                       await initPaymentSheet(context, user, total);

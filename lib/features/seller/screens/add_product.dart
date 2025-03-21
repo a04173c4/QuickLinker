@@ -1,14 +1,14 @@
 import 'dart:io';
 
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/features/seller/services/seller_service.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/input_field.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/features/seller/services/seller_service.dart';
+import 'package:quicklinker/features/common/widgets/input_field.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:multivendorplatformmobile/features/seller/widgets/select_colors.dart';
-import 'package:multivendorplatformmobile/features/seller/widgets/select_sizes.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/seller/widgets/select_colors.dart';
+import 'package:quicklinker/features/seller/widgets/select_sizes.dart';
+import 'package:quicklinker/theme.dart';
 
 class AddProduct extends StatefulWidget {
   const AddProduct({super.key});
@@ -52,7 +52,7 @@ class _AddProductState extends State<AddProduct> {
     setState(() {
       selectedSizes = sizesSelected!;
     });
-    }
+  }
 
   void showColorsDialog() async {
     List<String>? colorsSelected = await showDialog(
@@ -65,7 +65,7 @@ class _AddProductState extends State<AddProduct> {
     setState(() {
       selectedColors = colorsSelected!;
     });
-    }
+  }
 
   void addNewProduct(
     name,

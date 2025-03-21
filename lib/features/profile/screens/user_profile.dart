@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:multivendorplatformmobile/features/models/profile.dart';
-import 'package:multivendorplatformmobile/features/profile/services/profile_service.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/models/profile.dart';
+import 'package:quicklinker/features/profile/services/profile_service.dart';
+import 'package:quicklinker/providers/user_provider.dart';
+import 'package:quicklinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class UserProfile extends StatefulWidget {
@@ -42,9 +42,7 @@ class _UserProfileState extends State<UserProfile> {
   bool isLoading = false;
   void updateProfile() {
     isLoading = true;
-    setState(() {
-      
-    });
+    setState(() {});
 
     profileService.updateProfile(
         name: nameController.text.isEmpty
@@ -66,7 +64,6 @@ class _UserProfileState extends State<UserProfile> {
             ? 'untouched country'
             : countryController.text,
         context: context);
-
   }
 
   final nameController = TextEditingController();
@@ -270,10 +267,17 @@ class _UserProfileState extends State<UserProfile> {
                 onPressed: () {
                   updateProfile();
                 },
-                child: isLoading?const Center(child: CircularProgressIndicator(),): const Text(
-                  'تحديث',
-                  style: TextStyle(fontSize: 24, fontFamily: 'OdinRounded',),
-                )),
+                child: isLoading
+                    ? const Center(
+                        child: CircularProgressIndicator(),
+                      )
+                    : const Text(
+                        'تحديث',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontFamily: 'OdinRounded',
+                        ),
+                      )),
           )
         ],
       ),

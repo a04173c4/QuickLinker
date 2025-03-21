@@ -1,15 +1,15 @@
 import 'dart:io';
 
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/features/models/product.dart';
-import 'package:multivendorplatformmobile/features/seller/services/seller_service.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/input_field.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/features/models/product.dart';
+import 'package:quicklinker/features/seller/services/seller_service.dart';
+import 'package:quicklinker/features/common/widgets/input_field.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:multivendorplatformmobile/features/seller/widgets/select_colors.dart';
-import 'package:multivendorplatformmobile/features/seller/widgets/select_sizes.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/seller/widgets/select_colors.dart';
+import 'package:quicklinker/features/seller/widgets/select_sizes.dart';
+import 'package:quicklinker/theme.dart';
 
 class EditProduct extends StatefulWidget {
   const EditProduct({super.key, required this.product});
@@ -89,7 +89,7 @@ class _EditProductState extends State<EditProduct> {
     setState(() {
       selectedSizes = sizesSelected!;
     });
-    }
+  }
 
   void showColorsDialog() async {
     List<String>? colorsSelected = await showDialog(
@@ -102,7 +102,7 @@ class _EditProductState extends State<EditProduct> {
     setState(() {
       selectedColors = colorsSelected!;
     });
-    }
+  }
 
   @override
   void dispose() {
@@ -390,7 +390,7 @@ class _EditProductState extends State<EditProduct> {
               const SizedBox(
                 height: 10,
               ),
-                            widget.product.sizes.isNotEmpty
+              widget.product.sizes.isNotEmpty
                   ? const Text("الألوان الحالية")
                   : const SizedBox.shrink(),
               widget.product.colors.isNotEmpty
@@ -425,7 +425,6 @@ class _EditProductState extends State<EditProduct> {
               selectedColors.isNotEmpty
                   ? const Text("ألوان مختارة جديدة")
                   : const SizedBox.shrink(),
-
               selectedColors.isNotEmpty
                   ? const Text("الألوان المختارة")
                   : const SizedBox.shrink(),
@@ -479,7 +478,11 @@ class _EditProductState extends State<EditProduct> {
                     selectedtype,
                   );
                 },
-                child: Text('تعديل ${widget.product.name}',maxLines: 1,overflow: TextOverflow.ellipsis,),
+                child: Text(
+                  'تعديل ${widget.product.name}',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ],
           ),

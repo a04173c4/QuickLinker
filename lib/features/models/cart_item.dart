@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:multivendorplatformmobile/features/models/product.dart';
+import 'package:quicklinker/features/models/product.dart';
 
 class CartItem {
   final Product product;
@@ -20,18 +20,24 @@ class CartItem {
           id: map['product']["_id"],
           name: map['product']["name"],
           desc: map['product']["desc"],
-          img:map['product']["img"]!=null? (map['product']["img"] as List<dynamic>)
-              .map((img) => img as String)
-              .toList():[],
+          img: map['product']["img"] != null
+              ? (map['product']["img"] as List<dynamic>)
+                  .map((img) => img as String)
+                  .toList()
+              : [],
           type: map['product']["type"],
           stock: int.parse(map['product']['stock']),
           price: map['product']["price"],
-          sizes: map['product']['sizes']!=null?(map['product']['sizes'] as List<dynamic>)
-              .map((e) => e as String)
-              .toList() : [],
-          colors:map['product']['colors']!=null?  (map['product']['colors'] as List<dynamic>)
-              .map((e) => e as String)
-              .toList() : [],
+          sizes: map['product']['sizes'] != null
+              ? (map['product']['sizes'] as List<dynamic>)
+                  .map((e) => e as String)
+                  .toList()
+              : [],
+          colors: map['product']['colors'] != null
+              ? (map['product']['colors'] as List<dynamic>)
+                  .map((e) => e as String)
+                  .toList()
+              : [],
           seller: map['product']["seller"]),
       amount: map['amount'] as int,
     );

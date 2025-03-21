@@ -3,8 +3,8 @@ import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/providers/user_provider.dart';
 import 'package:provider/provider.dart';
 
 class PaymentScreen extends StatefulWidget {

@@ -2,12 +2,12 @@
 
 import 'dart:convert';
 
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/features/models/cart_item.dart';
-import 'package:multivendorplatformmobile/features/models/product.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/features/models/cart_item.dart';
+import 'package:quicklinker/features/models/product.dart';
 
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
-import 'package:multivendorplatformmobile/utils.dart';
+import 'package:quicklinker/providers/user_provider.dart';
+import 'package:quicklinker/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -107,7 +107,7 @@ class ProductDetailsService extends ChangeNotifier {
         'Content-Type': 'application/json; charset=UTF-8',
       },
     );
-    
+
     print("from get profile api");
     print(res.body);
 

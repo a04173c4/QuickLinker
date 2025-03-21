@@ -1,7 +1,7 @@
-import 'package:multivendorplatformmobile/features/models/cart_item.dart';
-import 'package:multivendorplatformmobile/features/models/product.dart';
-import 'package:multivendorplatformmobile/features/products/screens/product_details.dart';
-import 'package:multivendorplatformmobile/features/wishlist/services/wishlist_service.dart';
+import 'package:quicklinker/features/models/cart_item.dart';
+import 'package:quicklinker/features/models/product.dart';
+import 'package:quicklinker/features/products/screens/product_details.dart';
+import 'package:quicklinker/features/wishlist/services/wishlist_service.dart';
 import 'package:flutter/material.dart';
 
 class WishlistItem extends StatefulWidget {
@@ -71,7 +71,11 @@ class _WishlistItemState extends State<WishlistItem> {
           ),
           child: Row(
             children: [
-              Image.network(widget.item.product.img[0],height: 155,width:155,),
+              Image.network(
+                widget.item.product.img[0],
+                height: 155,
+                width: 155,
+              ),
               Column(
                 children: [
                   Container(
@@ -102,7 +106,7 @@ class _WishlistItemState extends State<WishlistItem> {
                     width: 235,
                     padding: const EdgeInsets.only(left: 10, top: 5),
                     child: Text(
-                     "المبلغ المضاف: ${widget.item.amount.toString()}",
+                      "المبلغ المضاف: ${widget.item.amount.toString()}",
                       style: const TextStyle(
                         color: Colors.teal,
                       ),
@@ -118,7 +122,7 @@ class _WishlistItemState extends State<WishlistItem> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: ElevatedButton(
                 onPressed: () async {
                   Product product = await wishlistService.getProduct(
@@ -133,7 +137,6 @@ class _WishlistItemState extends State<WishlistItem> {
               onPressed: () {
                 editWishlist(widget.item.product, true);
                 moveToCart(widget.item.product);
-                
               },
               child: const Text('نقل إلى سلة التسوق'),
             ),

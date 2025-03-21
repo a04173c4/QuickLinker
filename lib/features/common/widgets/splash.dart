@@ -1,14 +1,14 @@
 // ignore_for_file: use_build_context_synchronously, avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/auth/services/auth_service.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/onboarding.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/auth/services/auth_service.dart';
+import 'package:quicklinker/features/common/widgets/onboarding.dart';
+import 'package:quicklinker/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/bottom_navbar.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/seller.dart';
+import 'package:quicklinker/providers/user_provider.dart';
+import 'package:quicklinker/features/common/widgets/bottom_navbar.dart';
+import 'package:quicklinker/features/seller/screens/seller.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -64,19 +64,23 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-
+    return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
         children: [
-          Container(height: 100,),
-         Image.asset("assets/images/elogo.png")
-          ,
-          const Center(
-            child: CircularProgressIndicator(color: teal,strokeWidth: 7,),
+          Container(
+            height: 100,
           ),
-          const SizedBox(height: 40,)
+          Image.asset("assets/images/elogo.png"),
+          const Center(
+            child: CircularProgressIndicator(
+              color: teal,
+              strokeWidth: 7,
+            ),
+          ),
+          const SizedBox(
+            height: 40,
+          )
         ],
       ),
     );

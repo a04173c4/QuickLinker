@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/models/order.dart';
-import 'package:multivendorplatformmobile/features/orders/widgets/order_product.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/models/order.dart';
+import 'package:quicklinker/features/orders/widgets/order_product.dart';
+import 'package:quicklinker/theme.dart';
 
 class OrderDetails extends StatelessWidget {
   const OrderDetails({super.key, required this.order});
@@ -23,25 +23,36 @@ class OrderDetails extends StatelessWidget {
               children: [
                 Text(
                   "رقم الطلب: ${order.orderId}",
-                  style: const TextStyle(fontSize: 17, fontFamily: 'OdinRounded',),
+                  style: const TextStyle(
+                    fontSize: 17,
+                    fontFamily: 'OdinRounded',
+                  ),
                 ),
                 Text(
                   "المبلغ الاجمالي: \$${order.amount}",
-                  style: const TextStyle(fontSize: 22, fontFamily: 'OdinRounded',),
+                  style: const TextStyle(
+                    fontSize: 22,
+                    fontFamily: 'OdinRounded',
+                  ),
                 ),
                 Text(
                   "الحالة: ${order.status}",
                   style: TextStyle(
-                      color: order.status == "received"
-                          ? Colors.orange
-                          : order.status == "on the way"
-                              ? Colors.blue
-                              : teal,
-                      fontSize: 20, fontFamily: 'OdinRounded',),
+                    color: order.status == "received"
+                        ? Colors.orange
+                        : order.status == "on the way"
+                            ? Colors.blue
+                            : teal,
+                    fontSize: 20,
+                    fontFamily: 'OdinRounded',
+                  ),
                 ),
                 Text(
                   " تم الطلب : ${order.date}",
-                  style: const TextStyle(fontSize: 20, fontFamily: 'OdinRounded',),
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'OdinRounded',
+                  ),
                 ),
               ],
             ),
@@ -50,7 +61,10 @@ class OrderDetails extends StatelessWidget {
             padding: EdgeInsets.all(14.0),
             child: Text(
               "المنتج المطلوب",
-              style: TextStyle(fontSize: 22, fontFamily: 'OdinRounded',),
+              style: TextStyle(
+                fontSize: 22,
+                fontFamily: 'OdinRounded',
+              ),
             ),
           ),
           Expanded(

@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:intl/intl.dart';
-import 'package:multivendorplatformmobile/features/models/order_item_model.dart';
+import 'package:quicklinker/features/models/order_item_model.dart';
 
 class Order {
   final String orderId;
@@ -50,7 +50,9 @@ class Order {
     return Order(
       orderId: map['orderId'] as String,
       customerId: map['customerId'] as String,
-      amount: map["amount"]!=null?map["amount"].toDouble():map["totalAmount"].toDouble(),
+      amount: map["amount"] != null
+          ? map["amount"].toDouble()
+          : map["totalAmount"].toDouble(),
       status: map['status'] as String,
       items: List<OrderItemModel>.from(
         (map['items'] as List).map<OrderItemModel>(

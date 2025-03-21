@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import 'package:multivendorplatformmobile/features/models/product.dart';
+import 'package:quicklinker/features/models/product.dart';
 
 class OrderItemModel {
   final Product product;
@@ -9,8 +9,6 @@ class OrderItemModel {
     required this.product,
     required this.amountBought,
   });
-  
-
 
   OrderItemModel copyWith({
     Product? product,
@@ -31,9 +29,8 @@ class OrderItemModel {
 
   factory OrderItemModel.fromMap(Map<String, dynamic> map) {
     return OrderItemModel(
-      product: Product.fromMap(map['product'] as Map<String,dynamic>),
+      product: Product.fromMap(map['product'] as Map<String, dynamic>),
       amountBought: map['amount'] as int,
     );
   }
-
 }

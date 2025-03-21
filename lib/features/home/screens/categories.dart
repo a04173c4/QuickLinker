@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/features/home/screens/products_by_category.dart';
-import 'package:multivendorplatformmobile/features/search/screens/search.dart';
-import 'package:multivendorplatformmobile/features/search/widgets/search_field.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/features/home/screens/products_by_category.dart';
+import 'package:quicklinker/features/search/screens/search.dart';
+import 'package:quicklinker/features/search/widgets/search_field.dart';
+import 'package:quicklinker/theme.dart';
 
 class Categories extends StatefulWidget {
   const Categories({super.key});
@@ -78,7 +78,9 @@ class _CategoriesState extends State<Categories> {
                               child: Text(
                             productCategories[index]["title"]!,
                             style: const TextStyle(
-                                fontSize: 18, fontFamily: 'OdinRounded', overflow: TextOverflow.ellipsis),
+                                fontSize: 18,
+                                fontFamily: 'OdinRounded',
+                                overflow: TextOverflow.ellipsis),
                           )),
                         ],
                       ),

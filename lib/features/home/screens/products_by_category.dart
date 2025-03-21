@@ -1,18 +1,18 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:multivendorplatformmobile/features/common/widgets/bottom_navbar.dart';
-import 'package:multivendorplatformmobile/features/home/services/home_service.dart';
-import 'package:multivendorplatformmobile/features/models/product.dart';
-import 'package:multivendorplatformmobile/features/models/user.dart';
-import 'package:multivendorplatformmobile/features/products/screens/product_details.dart';
+import 'package:quicklinker/features/common/widgets/bottom_navbar.dart';
+import 'package:quicklinker/features/home/services/home_service.dart';
+import 'package:quicklinker/features/models/product.dart';
+import 'package:quicklinker/features/models/user.dart';
+import 'package:quicklinker/features/products/screens/product_details.dart';
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/search/screens/search_category_product.dart';
-import 'package:multivendorplatformmobile/features/search/widgets/search_field.dart';
-import 'package:multivendorplatformmobile/features/search/widgets/searched_product.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/seller.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
-import 'package:multivendorplatformmobile/theme.dart';
-import 'package:multivendorplatformmobile/utils.dart';
+import 'package:quicklinker/features/search/screens/search_category_product.dart';
+import 'package:quicklinker/features/search/widgets/search_field.dart';
+import 'package:quicklinker/features/search/widgets/searched_product.dart';
+import 'package:quicklinker/features/seller/screens/seller.dart';
+import 'package:quicklinker/providers/user_provider.dart';
+import 'package:quicklinker/theme.dart';
+import 'package:quicklinker/utils.dart';
 import 'package:provider/provider.dart';
 
 class ProductsByCategory extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/auth/screens/signup.dart';
-import 'package:multivendorplatformmobile/features/auth/services/auth_service.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/features/auth/screens/signup.dart';
+import 'package:quicklinker/features/auth/services/auth_service.dart';
+import 'package:quicklinker/theme.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

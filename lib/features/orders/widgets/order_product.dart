@@ -1,6 +1,6 @@
-import 'package:multivendorplatformmobile/features/models/order_item_model.dart';
+import 'package:quicklinker/features/models/order_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/products/screens/product_details.dart';
+import 'package:quicklinker/features/products/screens/product_details.dart';
 
 class OrderProduct extends StatelessWidget {
   final OrderItemModel product;
@@ -70,7 +70,11 @@ class OrderProduct extends StatelessWidget {
                   child: Text(
                     product.product.desc,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(color: Colors.teal, fontSize: 17, fontFamily: 'OdinRounded',),
+                    style: const TextStyle(
+                      color: Colors.teal,
+                      fontSize: 17,
+                      fontFamily: 'OdinRounded',
+                    ),
                     maxLines: 1,
                   ),
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/theme.dart';
 
 class SelectSizes extends StatefulWidget {
   final List<String> items;
@@ -41,10 +41,9 @@ class _SelectSizesState extends State<SelectSizes> {
         child: Column(
           children: widget.items
               .map((item) => CheckboxListTile(
-                checkColor: teal,
-                checkboxShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-
-                
+                    checkColor: teal,
+                    checkboxShape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18)),
                     value: _selectedItems.contains(item),
                     title: Text(sizeMapping[item]!),
                     onChanged: (isChecked) =>
@@ -54,7 +53,6 @@ class _SelectSizesState extends State<SelectSizes> {
         ),
       ),
       actions: [
-
         ElevatedButton(
           onPressed: _submit,
           child: const Text('أرسل'),
@@ -63,4 +61,3 @@ class _SelectSizesState extends State<SelectSizes> {
     );
   }
 }
-

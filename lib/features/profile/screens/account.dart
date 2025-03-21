@@ -1,11 +1,11 @@
-import 'package:multivendorplatformmobile/features/auth/services/auth_service.dart';
-import 'package:multivendorplatformmobile/features/orders/screens/orders.dart';
-import 'package:multivendorplatformmobile/features/profile/screens/user_profile.dart';
-import 'package:multivendorplatformmobile/features/profile/widgets/profile_item.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/sales.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
+import 'package:quicklinker/features/auth/services/auth_service.dart';
+import 'package:quicklinker/features/orders/screens/orders.dart';
+import 'package:quicklinker/features/profile/screens/user_profile.dart';
+import 'package:quicklinker/features/profile/widgets/profile_item.dart';
+import 'package:quicklinker/features/seller/screens/sales.dart';
+import 'package:quicklinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class Account extends StatelessWidget {
@@ -40,7 +40,10 @@ class Account extends StatelessWidget {
               ),
               subtitle: Text(
                 user.email,
-                style: const TextStyle(fontSize: 17, fontFamily: 'OdinRounded',),
+                style: const TextStyle(
+                  fontSize: 17,
+                  fontFamily: 'OdinRounded',
+                ),
               ),
               trailing: GestureDetector(
                   onTap: () {
@@ -73,7 +76,11 @@ class Account extends StatelessWidget {
                       padding: const EdgeInsets.all(20),
                       child: const Text(
                         "المعلومات الشخصية",
-                        style: TextStyle(color: lightAsh, fontSize: 19, fontFamily: 'OdinRounded',),
+                        style: TextStyle(
+                          color: lightAsh,
+                          fontSize: 19,
+                          fontFamily: 'OdinRounded',
+                        ),
                       ),
                     ),
                     ProfileItem(
@@ -106,7 +113,11 @@ class Account extends StatelessWidget {
                       padding: const EdgeInsets.all(20),
                       child: const Text(
                         "الدعم والمعلومات",
-                        style: TextStyle(color: lightAsh, fontSize: 19, fontFamily: 'OdinRounded',),
+                        style: TextStyle(
+                          color: lightAsh,
+                          fontSize: 19,
+                          fontFamily: 'OdinRounded',
+                        ),
                       ),
                     ),
                     ProfileItem(

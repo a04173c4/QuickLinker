@@ -1,16 +1,16 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/features/common/widgets/bottom_navbar.dart';
-import 'package:multivendorplatformmobile/features/models/product.dart';
-import 'package:multivendorplatformmobile/features/models/profile.dart';
-import 'package:multivendorplatformmobile/features/products/screens/product_details.dart';
-import 'package:multivendorplatformmobile/features/products/services/product_details_service.dart';
-import 'package:multivendorplatformmobile/features/search/screens/search_seller_products.dart';
-import 'package:multivendorplatformmobile/features/search/widgets/search_field.dart';
-import 'package:multivendorplatformmobile/features/search/widgets/searched_product.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/seller.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
+import 'package:quicklinker/features/common/widgets/bottom_navbar.dart';
+import 'package:quicklinker/features/models/product.dart';
+import 'package:quicklinker/features/models/profile.dart';
+import 'package:quicklinker/features/products/screens/product_details.dart';
+import 'package:quicklinker/features/products/services/product_details_service.dart';
+import 'package:quicklinker/features/search/screens/search_seller_products.dart';
+import 'package:quicklinker/features/search/widgets/search_field.dart';
+import 'package:quicklinker/features/search/widgets/searched_product.dart';
+import 'package:quicklinker/features/seller/screens/seller.dart';
+import 'package:quicklinker/providers/user_provider.dart';
 import 'package:provider/provider.dart';
 
 class SellerProfile extends StatefulWidget {
@@ -59,7 +59,7 @@ class _SellerProfileState extends State<SellerProfile> {
 
   @override
   Widget build(BuildContext context) {
-        final userProvider = Provider.of<UserProvider>(context, listen: false);
+    final userProvider = Provider.of<UserProvider>(context, listen: false);
 
     return sellerProfile == null || products == null
         ? const Center(
@@ -75,24 +75,29 @@ class _SellerProfileState extends State<SellerProfile> {
                 ),
                 title: Text(
                   "منتجات ${sellerProfile!.name} ",
-                  style: const TextStyle(fontSize: 20, fontFamily: 'OdinRounded',),
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'OdinRounded',
+                  ),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                 ),
               ),
               actions: [
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pushNamedAndRemoveUntil(
-  context, 
-userProvider.user.role=='Seller'?Seller.routeName:BottomNavBar.routeName  ,  // Route name of the home screen
-  (route) => false, // Removes all previous routes
-);
+                      context,
+                      userProvider.user.role == 'Seller'
+                          ? Seller.routeName
+                          : BottomNavBar
+                              .routeName, // Route name of the home screen
+                      (route) => false, // Removes all previous routes
+                    );
                   },
-
-                  child:Container(
-                    margin: const EdgeInsets.only(left: 10),
-                    child: const Icon(Icons.home_outlined)),
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 10),
+                      child: const Icon(Icons.home_outlined)),
                 )
               ],
             ),
@@ -107,7 +112,10 @@ userProvider.user.role=='Seller'?Seller.routeName:BottomNavBar.routeName  ,  // 
                         padding: const EdgeInsets.symmetric(horizontal: 18.0),
                         child: Text(
                           "معلومات عنا: ${sellerProfile!.about}",
-                          style: const TextStyle(fontSize: 19, fontFamily: 'OdinRounded',),
+                          style: const TextStyle(
+                            fontSize: 19,
+                            fontFamily: 'OdinRounded',
+                          ),
                         ),
                       ),
                       Padding(

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:multivendorplatformmobile/theme.dart';
+import 'package:quicklinker/theme.dart';
 
 class ProfileItem extends StatelessWidget {
   const ProfileItem(
       {super.key,
       required this.icon,
       required this.title,
-      required this.onTap, required this.imgUrl});
+      required this.onTap,
+      required this.imgUrl});
   final IconData? icon;
   final String? imgUrl;
   final String title;
@@ -17,16 +18,18 @@ class ProfileItem extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          leading: icon ==null? Image.asset(imgUrl!): Icon(
-            icon,
-            color: lightAsh,
-          ),
+          leading: icon == null
+              ? Image.asset(imgUrl!)
+              : Icon(
+                  icon,
+                  color: lightAsh,
+                ),
           onTap: onTap,
           title: Text(
             title,
             style: const TextStyle(color: lightAsh),
           ),
-          trailing:const Icon(
+          trailing: const Icon(
             Icons.arrow_forward_ios,
             color: Colors.teal,
           ),

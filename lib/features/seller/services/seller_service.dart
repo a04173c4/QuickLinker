@@ -3,12 +3,12 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:multivendorplatformmobile/constants.dart';
-import 'package:multivendorplatformmobile/features/auth/services/auth_service.dart';
-import 'package:multivendorplatformmobile/features/models/order.dart';
-import 'package:multivendorplatformmobile/features/seller/screens/seller.dart';
-import 'package:multivendorplatformmobile/providers/user_provider.dart';
-import 'package:multivendorplatformmobile/utils.dart';
+import 'package:quicklinker/constants.dart';
+import 'package:quicklinker/features/auth/services/auth_service.dart';
+import 'package:quicklinker/features/models/order.dart';
+import 'package:quicklinker/features/seller/screens/seller.dart';
+import 'package:quicklinker/providers/user_provider.dart';
+import 'package:quicklinker/utils.dart';
 import 'package:cloudinary_public/cloudinary_public.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -277,7 +277,7 @@ class SellerService {
           context: context,
           onSuccess: () {
             showSnackBar(context, 'تم تحديث حالة التسليم بنجاح');
-            Navigator.pop(context,status);
+            Navigator.pop(context, status);
           });
     } catch (e) {
       print(e);

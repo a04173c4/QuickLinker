@@ -1,4 +1,4 @@
-import 'package:multivendorplatformmobile/features/models/product.dart';
+import 'package:quicklinker/features/models/product.dart';
 import 'package:flutter/material.dart';
 
 class SearchedProduct extends StatelessWidget {
