@@ -59,10 +59,33 @@ class _SellerProductsState extends State<SellerProducts> {
         : Scaffold(
             appBar: AppBar(
               surfaceTintColor: Colors.transparent,
-              title: Text(
-                "منتجات ${user.profile.name}",
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
+              toolbarHeight: 80,
+              titleSpacing: 0,
+              automaticallyImplyLeading: false,
+              elevation: 0,
+              scrolledUnderElevation: 0,
+              title: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 12),
+                      child: Text(
+                        "مرحباً ${user.profile.name}",
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
+                    ),
+                    ConstrainedBox(
+                      constraints:
+                          const BoxConstraints(maxWidth: 300, maxHeight: 120),
+                      child: Image.asset(
+                        "assets/images/elogo-full.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             floatingActionButton: FloatingActionButton(
@@ -78,7 +101,11 @@ class _SellerProductsState extends State<SellerProducts> {
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.centerFloat,
             body: productList!.isEmpty
-                ? const Empty(img: "assets/images/nop.png", title: "ليس لديك أي منتجات", subtitle: "ابدأ بإضافة المنتجات!", btnText: "")
+                ? const Empty(
+                    img: "assets/images/nop.png",
+                    title: "ليس لديك أي منتجات",
+                    subtitle: "ابدأ بإضافة المنتجات!",
+                    btnText: "")
                 : Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GridView.builder(
@@ -139,9 +166,7 @@ class _SellerProductsState extends State<SellerProducts> {
                                           sellerService.deleteProduct(
                                               context: context,
                                               id: product['_id']);
-                                              setState(() {
-                                                
-                                              });
+                                          setState(() {});
                                         },
                                         icon: const Icon(Icons.delete),
                                       ),

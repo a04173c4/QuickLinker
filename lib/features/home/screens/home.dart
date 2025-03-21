@@ -26,51 +26,49 @@ class _HomeState extends State<Home> {
     final user = Provider.of<UserProvider>(context).user;
     return Scaffold(
       appBar: AppBar(
-  surfaceTintColor: Colors.transparent,
-  toolbarHeight: 80, // Reduced height for better density
-  titleSpacing: 0, // Remove default title padding
-  automaticallyImplyLeading: false, // Remove back arrow space
-  elevation: 0,
-  scrolledUnderElevation: 0,
-  title: Container(
-    padding: const EdgeInsets.symmetric(horizontal: 16), // Controlled padding
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        // Text with minimal padding
-        Padding(
-          padding: const EdgeInsets.only(right: 12), // Reduced right spacing
-          child: Text(
-            "مرحباً ${user.profile.name}",
-            style: Theme.of(context).textTheme.bodyLarge,
+        surfaceTintColor: Colors.transparent,
+        toolbarHeight: 80,
+        titleSpacing: 0,
+        automaticallyImplyLeading: false,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        title: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: Text(
+                  "مرحباً ${user.profile.name}",
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ),
+              ConstrainedBox(
+                constraints:
+                    const BoxConstraints(maxWidth: 300, maxHeight: 120),
+                child: Image.asset(
+                  "assets/images/elogo-full.png",
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ],
           ),
         ),
-        
-        // Logo with tight constraints
-        ConstrainedBox(
-          constraints: const BoxConstraints(
-            maxWidth: 300, // Reduced max width
-            maxHeight: 120, // Height matching toolbar density
-          ),
-          child: Image.asset(
-            "assets/images/elogo-full.png",
-            fit: BoxFit.contain,
-            alignment: Alignment.topCenter,
-          ),
-        ),
-      ],
-    ),
-  ),
-),
+      ),
       body: ListView(
         children: [
           SearchField(onFieldSubmitted: navigateToSearch),
-         const Padding(
-           padding:  EdgeInsets.all(12.0),
-           child:  Text("المنتجات المميزة",style: TextStyle(fontSize: 24, fontFamily: 'OdinRounded',),),
-         ),
+          const Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Text(
+              "المنتجات المميزة",
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'OdinRounded',
+              ),
+            ),
+          ),
           Stack(
             children: [
               CarouselSlider(
@@ -83,16 +81,15 @@ class _HomeState extends State<Home> {
                               image: NetworkImage(
                                 img,
                               ),
-
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(18)),
                     ),
                   );
                 }).toList(),
                 options: CarouselOptions(
-                  // autoPlay: true,
-                  height: 350,
-                  // autoPlayInterval: Duration(seconds: 1),
+                    // autoPlay: true,
+                    height: 350,
+                    // autoPlayInterval: Duration(seconds: 1),
                     viewportFraction: 0.98,
                     onPageChanged: (index, reason) {
                       setState(() {
@@ -101,14 +98,11 @@ class _HomeState extends State<Home> {
                     }),
               ),
               Positioned(
-                bottom: 14
-                ,
+                bottom: 14,
                 right: 18,
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: white
-                  ),
+                      borderRadius: BorderRadius.circular(10), color: white),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -133,34 +127,37 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.all(9),
             child: const Text(
               'أفضل المنتجات',
-              style: TextStyle(fontSize: 20, fontFamily: 'OdinRounded',),
+              style: TextStyle(
+                fontSize: 20,
+                fontFamily: 'OdinRounded',
+              ),
             ),
           ),
-               CarouselSlider(
-                items: carouselImages.map((img) {
-                  return Padding(
-                    padding: const EdgeInsets.all(9.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                img,
-                              ),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(18)),
-                    ),
-                  );
-                }).toList(),
-                options: CarouselOptions(
-                  // autoPlay: true,
-                  // autoPlayInterval: Duration(seconds: 1),
-                    viewportFraction: 0.98,
-                    onPageChanged: (index, reason) {
-                      setState(() {
-                        carouselNumber = index;
-                      });
-                    }),
-              ),
+          CarouselSlider(
+            items: carouselImages.map((img) {
+              return Padding(
+                padding: const EdgeInsets.all(9.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                            img,
+                          ),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.circular(18)),
+                ),
+              );
+            }).toList(),
+            options: CarouselOptions(
+                // autoPlay: true,
+                // autoPlayInterval: Duration(seconds: 1),
+                viewportFraction: 0.98,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    carouselNumber = index;
+                  });
+                }),
+          ),
         ],
       ),
     );
