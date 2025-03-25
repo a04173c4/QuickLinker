@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/popos/Development/flutter-3.29.1/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/usr/bin/ninja",
+      "-C",
+      "/home/popos/devel/Flutter/QuickLinker/android/app/.cxx/Debug/3o444y6a/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/usr/bin/ninja",
+    "-C",
+    "/home/popos/devel/Flutter/QuickLinker/android/app/.cxx/Debug/3o444y6a/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

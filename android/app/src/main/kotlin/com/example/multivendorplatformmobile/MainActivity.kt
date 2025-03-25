@@ -1,4 +1,4 @@
-package com.example.multivendorplatformmobile
+package com.example.quicklinker
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 

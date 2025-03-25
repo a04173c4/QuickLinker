@@ -78,11 +78,11 @@ class _OnboardingState extends State<Onboarding> {
           ),
         ],
         showSkipButton: true,
-        skip: Text(
+        skip: const Text(
           'تخطي',
           style: TextStyle(
             fontFamily: 'OdinRounded',
-            color: isDarkMode ? Colors.white : black,
+            color: Colors.white,
           ),
         ),
         next: const Text(

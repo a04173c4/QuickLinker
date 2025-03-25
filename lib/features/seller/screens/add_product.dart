@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:quicklinker/constants.dart';
 import 'package:quicklinker/features/seller/services/seller_service.dart';
 import 'package:quicklinker/features/common/widgets/input_field.dart';
