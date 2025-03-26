@@ -1,12 +1,12 @@
-import 'package:quicklinker/features/common/widgets/bottom_navbar.dart';
-import 'package:quicklinker/features/products/screens/product_details.dart';
-import 'package:quicklinker/features/search/services/search_service.dart';
-import 'package:quicklinker/features/search/widgets/search_field.dart';
-import 'package:quicklinker/features/search/widgets/searched_product.dart';
-import 'package:quicklinker/features/seller/screens/seller.dart';
-import 'package:quicklinker/providers/user_provider.dart';
+import 'package:QuickLinker/features/common/widgets/bottom_navbar.dart';
+import 'package:QuickLinker/features/products/screens/product_details.dart';
+import 'package:QuickLinker/features/search/services/search_service.dart';
+import 'package:QuickLinker/features/search/widgets/search_field.dart';
+import 'package:QuickLinker/features/search/widgets/searched_product.dart';
+import 'package:QuickLinker/features/seller/screens/seller.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class SearchSellerProducts extends StatefulWidget {

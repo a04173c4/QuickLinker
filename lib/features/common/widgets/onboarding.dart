@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:quicklinker/features/auth/screens/signup.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/features/auth/screens/signup.dart';
+import 'package:QuickLinker/theme.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -24,7 +24,8 @@ class _OnboardingState extends State<Onboarding> {
         pages: [
           PageViewModel(
             title: "أختر المنتجات",
-            body: "تصفح آلاف المنتجات من بائعين موثوقين بكل سهولة. استخدم فلترات البحث الذكية لتجد ما يناسب ذوقك وميزانيتك في دقائق. سواء كنت تبحث عن أحدث الصيحات أو عروضًا حصرية، ستجد كل ما تحتاجه - وأكثر - في مكان واحد.",
+            body:
+                "تصفح آلاف المنتجات من بائعين موثوقين بكل سهولة. استخدم فلترات البحث الذكية لتجد ما يناسب ذوقك وميزانيتك في دقائق. سواء كنت تبحث عن أحدث الصيحات أو عروضًا حصرية، ستجد كل ما تحتاجه - وأكثر - في مكان واحد.",
             image: Image.asset('assets/images/onboarding1.png', height: 200),
             decoration: PageDecoration(
               titleTextStyle: TextStyle(
@@ -42,7 +43,8 @@ class _OnboardingState extends State<Onboarding> {
           ),
           PageViewModel(
             title: "سهولة الدفع",
-            body: "اختار طريقة الدفع المفضلة (بطاقات ائتمان، محافظ رقمية، الدفع عند الاستلام) واستمتع بمعاملات سريعة ومشفرة بأعلى معايير الأمان. لا داعي للقلق - بياناتك المالية تحت حماية مستمرة!",
+            body:
+                "اختار طريقة الدفع المفضلة (بطاقات ائتمان، محافظ رقمية، الدفع عند الاستلام) واستمتع بمعاملات سريعة ومشفرة بأعلى معايير الأمان. لا داعي للقلق - بياناتك المالية تحت حماية مستمرة!",
             image: Image.asset('assets/images/onboarding2.png', height: 200),
             decoration: PageDecoration(
               titleTextStyle: TextStyle(
@@ -60,7 +62,8 @@ class _OnboardingState extends State<Onboarding> {
           ),
           PageViewModel(
             title: "إسلتم طلبك",
-            body: "استلم منتجاتك في الوقت والمكان الذي يناسبك: توصيل سريع، نقاط استلام، أو حتى توصيل فاخر. نوفر لك تحديثات مباشرة عن حالة الطلب ودعمًا فوريًا لضمان رضاك التام. وفر وقتك، نحن نتعامل مع الباقي!",
+            body:
+                "استلم منتجاتك في الوقت والمكان الذي يناسبك: توصيل سريع، نقاط استلام، أو حتى توصيل فاخر. نوفر لك تحديثات مباشرة عن حالة الطلب ودعمًا فوريًا لضمان رضاك التام. وفر وقتك، نحن نتعامل مع الباقي!",
             image: Image.asset('assets/images/onboarding3.png', height: 200),
             decoration: PageDecoration(
               titleTextStyle: TextStyle(
@@ -108,9 +111,8 @@ class _OnboardingState extends State<Onboarding> {
           activeColor: teal,
           color: Colors.grey,
           spacing: const EdgeInsets.symmetric(horizontal: 3.0),
-          activeShape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.0)
-          ),
+          activeShape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
         ),
         globalBackgroundColor: Theme.of(context).scaffoldBackgroundColor,
         freeze: true,

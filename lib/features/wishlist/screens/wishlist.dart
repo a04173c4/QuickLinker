@@ -1,7 +1,7 @@
-import 'package:quicklinker/features/common/widgets/empty.dart';
-import 'package:quicklinker/features/search/screens/search.dart';
-import 'package:quicklinker/features/wishlist/widgets/wishlist_item.dart';
-import 'package:quicklinker/providers/user_provider.dart';
+import 'package:QuickLinker/features/common/widgets/empty.dart';
+import 'package:QuickLinker/features/search/screens/search.dart';
+import 'package:QuickLinker/features/wishlist/widgets/wishlist_item.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

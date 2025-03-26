@@ -2,9 +2,9 @@
 
 import 'dart:convert';
 
-import 'package:quicklinker/constants.dart';
-import 'package:quicklinker/features/models/product.dart';
-import 'package:quicklinker/utils.dart';
+import 'package:QuickLinker/constants.dart';
+import 'package:QuickLinker/features/models/product.dart';
+import 'package:QuickLinker/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 

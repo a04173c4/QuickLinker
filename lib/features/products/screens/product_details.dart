@@ -1,17 +1,17 @@
 // ignore_for_file: avoid_print
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:quicklinker/constants.dart';
-import 'package:quicklinker/features/models/product.dart';
-import 'package:quicklinker/features/products/services/product_details_service.dart';
+import 'package:QuickLinker/constants.dart';
+import 'package:QuickLinker/features/models/product.dart';
+import 'package:QuickLinker/features/products/services/product_details_service.dart';
 import 'package:flutter/material.dart';
-import 'package:quicklinker/features/products/widgets/dialogs/cart_colors_exceeded.dart';
-import 'package:quicklinker/features/products/widgets/dialogs/cart_sizes_exceeded.dart';
-import 'package:quicklinker/features/products/widgets/dialogs/select_colors_dialog.dart';
-import 'package:quicklinker/features/products/widgets/dialogs/select_sizes_dialog.dart';
-import 'package:quicklinker/features/seller/screens/seller_profile.dart';
-import 'package:quicklinker/features/wishlist/services/wishlist_service.dart';
-import 'package:quicklinker/theme.dart';
-import 'package:quicklinker/utils.dart';
+import 'package:QuickLinker/features/products/widgets/dialogs/cart_colors_exceeded.dart';
+import 'package:QuickLinker/features/products/widgets/dialogs/cart_sizes_exceeded.dart';
+import 'package:QuickLinker/features/products/widgets/dialogs/select_colors_dialog.dart';
+import 'package:QuickLinker/features/products/widgets/dialogs/select_sizes_dialog.dart';
+import 'package:QuickLinker/features/seller/screens/seller_profile.dart';
+import 'package:QuickLinker/features/wishlist/services/wishlist_service.dart';
+import 'package:QuickLinker/theme.dart';
+import 'package:QuickLinker/utils.dart';
 
 class ProductDetails extends StatefulWidget {
   static const String routeName = '/product-details';

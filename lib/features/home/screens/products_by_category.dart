@@ -1,18 +1,18 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:quicklinker/features/common/widgets/bottom_navbar.dart';
-import 'package:quicklinker/features/home/services/home_service.dart';
-import 'package:quicklinker/features/models/product.dart';
-import 'package:quicklinker/features/models/user.dart';
-import 'package:quicklinker/features/products/screens/product_details.dart';
+import 'package:QuickLinker/features/common/widgets/bottom_navbar.dart';
+import 'package:QuickLinker/features/home/services/home_service.dart';
+import 'package:QuickLinker/features/models/product.dart';
+import 'package:QuickLinker/features/models/user.dart';
+import 'package:QuickLinker/features/products/screens/product_details.dart';
 import 'package:flutter/material.dart';
-import 'package:quicklinker/features/search/screens/search_category_product.dart';
-import 'package:quicklinker/features/search/widgets/search_field.dart';
-import 'package:quicklinker/features/search/widgets/searched_product.dart';
-import 'package:quicklinker/features/seller/screens/seller.dart';
-import 'package:quicklinker/providers/user_provider.dart';
-import 'package:quicklinker/theme.dart';
-import 'package:quicklinker/utils.dart';
+import 'package:QuickLinker/features/search/screens/search_category_product.dart';
+import 'package:QuickLinker/features/search/widgets/search_field.dart';
+import 'package:QuickLinker/features/search/widgets/searched_product.dart';
+import 'package:QuickLinker/features/seller/screens/seller.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
+import 'package:QuickLinker/theme.dart';
+import 'package:QuickLinker/utils.dart';
 import 'package:provider/provider.dart';
 
 class ProductsByCategory extends StatefulWidget {

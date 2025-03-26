@@ -1,6 +1,6 @@
-import 'package:quicklinker/features/models/order_item_model.dart';
+import 'package:QuickLinker/features/models/order_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:quicklinker/features/products/screens/product_details.dart';
+import 'package:QuickLinker/features/products/screens/product_details.dart';
 
 class OrderProduct extends StatelessWidget {
   final OrderItemModel product;

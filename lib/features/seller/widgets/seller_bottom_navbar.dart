@@ -1,12 +1,12 @@
 // import 'package:flutter/material.dart';
-// import 'package:quicklinker/constants.dart';
-// import 'package:quicklinker/features/home/screens/categories.dart';
-// import 'package:quicklinker/features/orders/screens/orders.dart';
-// import 'package:quicklinker/features/products/screens/cart.dart';
-// import 'package:quicklinker/features/seller/screens/sales.dart';
-// import 'package:quicklinker/features/seller/screens/seller_products.dart';
-// import 'package:quicklinker/providers/user_provider.dart';
-// import 'package:quicklinker/theme.dart';
+// import 'package:QuickLinker/constants.dart';
+// import 'package:QuickLinker/features/home/screens/categories.dart';
+// import 'package:QuickLinker/features/orders/screens/orders.dart';
+// import 'package:QuickLinker/features/products/screens/cart.dart';
+// import 'package:QuickLinker/features/seller/screens/sales.dart';
+// import 'package:QuickLinker/features/seller/screens/seller_products.dart';
+// import 'package:QuickLinker/providers/user_provider.dart';
+// import 'package:QuickLinker/theme.dart';
 // import 'package:badges/badges.dart' as badges;
 // import 'package:provider/provider.dart';
 

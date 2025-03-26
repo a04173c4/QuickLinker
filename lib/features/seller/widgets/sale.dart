@@ -1,5 +1,5 @@
-import 'package:quicklinker/features/models/order.dart';
-import 'package:quicklinker/features/seller/services/seller_service.dart';
+import 'package:QuickLinker/features/models/order.dart';
+import 'package:QuickLinker/features/seller/services/seller_service.dart';
 import 'package:flutter/material.dart';
 
 class Sale extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quicklinker/features/models/order.dart';
-import 'package:quicklinker/features/orders/widgets/order_product.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/features/models/order.dart';
+import 'package:QuickLinker/features/orders/widgets/order_product.dart';
+import 'package:QuickLinker/theme.dart';
 
 class OrderDetails extends StatelessWidget {
   const OrderDetails({super.key, required this.order});

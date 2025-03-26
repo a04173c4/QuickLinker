@@ -1,14 +1,14 @@
-import 'package:quicklinker/constants.dart';
-import 'package:quicklinker/features/home/screens/categories.dart';
-import 'package:quicklinker/features/home/screens/home.dart';
-import 'package:quicklinker/features/products/screens/cart.dart';
-import 'package:quicklinker/features/profile/screens/account.dart';
-import 'package:quicklinker/features/wishlist/screens/wishlist.dart';
-import 'package:quicklinker/providers/user_provider.dart';
+import 'package:QuickLinker/constants.dart';
+import 'package:QuickLinker/features/home/screens/categories.dart';
+import 'package:QuickLinker/features/home/screens/home.dart';
+import 'package:QuickLinker/features/products/screens/cart.dart';
+import 'package:QuickLinker/features/profile/screens/account.dart';
+import 'package:QuickLinker/features/wishlist/screens/wishlist.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
 
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class BottomNavBar extends StatefulWidget {

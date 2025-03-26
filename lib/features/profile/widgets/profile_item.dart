@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/theme.dart';
 
 class ProfileItem extends StatelessWidget {
   const ProfileItem(

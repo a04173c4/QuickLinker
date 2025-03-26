@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:quicklinker/features/common/widgets/empty.dart';
-import 'package:quicklinker/features/models/order.dart';
-import 'package:quicklinker/features/models/user.dart';
-import 'package:quicklinker/features/orders/screens/order_details.dart';
-import 'package:quicklinker/features/orders/services/order_service.dart';
-import 'package:quicklinker/providers/user_provider.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/features/common/widgets/empty.dart';
+import 'package:QuickLinker/features/models/order.dart';
+import 'package:QuickLinker/features/models/user.dart';
+import 'package:QuickLinker/features/orders/screens/order_details.dart';
+import 'package:QuickLinker/features/orders/services/order_service.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
+import 'package:QuickLinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class Orders extends StatefulWidget {

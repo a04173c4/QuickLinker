@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:quicklinker/features/models/profile.dart';
-import 'package:quicklinker/features/profile/services/profile_service.dart';
-import 'package:quicklinker/providers/user_provider.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/features/models/profile.dart';
+import 'package:QuickLinker/features/profile/services/profile_service.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
+import 'package:QuickLinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class UserProfile extends StatefulWidget {

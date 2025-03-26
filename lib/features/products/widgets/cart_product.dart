@@ -1,9 +1,9 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:quicklinker/features/models/product.dart';
-import 'package:quicklinker/features/products/screens/product_details.dart';
-import 'package:quicklinker/features/products/services/product_details_service.dart';
-import 'package:quicklinker/providers/user_provider.dart';
+import 'package:QuickLinker/features/models/product.dart';
+import 'package:QuickLinker/features/products/screens/product_details.dart';
+import 'package:QuickLinker/features/products/services/product_details_service.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

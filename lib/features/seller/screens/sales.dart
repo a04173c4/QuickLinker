@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:quicklinker/features/models/order.dart';
-import 'package:quicklinker/features/orders/screens/order_details.dart';
-import 'package:quicklinker/features/seller/screens/edit_dlivery_status.dart';
-import 'package:quicklinker/features/seller/services/seller_service.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/features/models/order.dart';
+import 'package:QuickLinker/features/orders/screens/order_details.dart';
+import 'package:QuickLinker/features/seller/screens/edit_dlivery_status.dart';
+import 'package:QuickLinker/features/seller/services/seller_service.dart';
+import 'package:QuickLinker/theme.dart';
 
 class Sales extends StatefulWidget {
   const Sales({super.key});

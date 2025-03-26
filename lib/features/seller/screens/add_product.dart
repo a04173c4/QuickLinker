@@ -1,13 +1,13 @@
 import 'dart:io';
-import 'package:quicklinker/constants.dart';
-import 'package:quicklinker/features/seller/services/seller_service.dart';
-import 'package:quicklinker/features/common/widgets/input_field.dart';
+import 'package:QuickLinker/constants.dart';
+import 'package:QuickLinker/features/seller/services/seller_service.dart';
+import 'package:QuickLinker/features/common/widgets/input_field.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:quicklinker/features/seller/widgets/select_colors.dart';
-import 'package:quicklinker/features/seller/widgets/select_sizes.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/features/seller/widgets/select_colors.dart';
+import 'package:QuickLinker/features/seller/widgets/select_sizes.dart';
+import 'package:QuickLinker/theme.dart';
 
 class AddProduct extends StatefulWidget {
   const AddProduct({super.key});

@@ -1,23 +1,23 @@
-import 'package:quicklinker/features/auth/screens/login.dart';
-import 'package:quicklinker/features/auth/screens/signup.dart';
-import 'package:quicklinker/features/common/widgets/onboarding.dart';
-import 'package:quicklinker/features/orders/screens/orders.dart';
-import 'package:quicklinker/features/profile/screens/user_profile.dart';
-import 'package:quicklinker/features/search/screens/search_category_product.dart';
-import 'package:quicklinker/features/search/screens/search_seller_products.dart';
-import 'package:quicklinker/features/seller/screens/add_product.dart';
-import 'package:quicklinker/features/common/widgets/bottom_navbar.dart';
-import 'package:quicklinker/features/home/screens/home.dart';
-import 'package:quicklinker/features/home/screens/products_by_category.dart';
-import 'package:quicklinker/features/models/product.dart';
-import 'package:quicklinker/features/products/screens/product_details.dart';
-import 'package:quicklinker/features/search/screens/search.dart';
+import 'package:QuickLinker/features/auth/screens/login.dart';
+import 'package:QuickLinker/features/auth/screens/signup.dart';
+import 'package:QuickLinker/features/common/widgets/onboarding.dart';
+import 'package:QuickLinker/features/orders/screens/orders.dart';
+import 'package:QuickLinker/features/profile/screens/user_profile.dart';
+import 'package:QuickLinker/features/search/screens/search_category_product.dart';
+import 'package:QuickLinker/features/search/screens/search_seller_products.dart';
+import 'package:QuickLinker/features/seller/screens/add_product.dart';
+import 'package:QuickLinker/features/common/widgets/bottom_navbar.dart';
+import 'package:QuickLinker/features/home/screens/home.dart';
+import 'package:QuickLinker/features/home/screens/products_by_category.dart';
+import 'package:QuickLinker/features/models/product.dart';
+import 'package:QuickLinker/features/products/screens/product_details.dart';
+import 'package:QuickLinker/features/search/screens/search.dart';
 import 'package:flutter/material.dart';
-import 'package:quicklinker/features/seller/screens/edit_product.dart';
-import 'package:quicklinker/features/seller/screens/sales.dart';
-import 'package:quicklinker/features/seller/screens/seller.dart';
-import 'package:quicklinker/features/seller/screens/seller_products.dart';
-import 'package:quicklinker/features/seller/screens/seller_profile.dart';
+import 'package:QuickLinker/features/seller/screens/edit_product.dart';
+import 'package:QuickLinker/features/seller/screens/sales.dart';
+import 'package:QuickLinker/features/seller/screens/seller.dart';
+import 'package:QuickLinker/features/seller/screens/seller_products.dart';
+import 'package:QuickLinker/features/seller/screens/seller_profile.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {

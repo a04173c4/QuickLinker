@@ -1,11 +1,11 @@
-import 'package:quicklinker/features/auth/services/auth_service.dart';
-import 'package:quicklinker/features/orders/screens/orders.dart';
-import 'package:quicklinker/features/profile/screens/user_profile.dart';
-import 'package:quicklinker/features/profile/widgets/profile_item.dart';
-import 'package:quicklinker/features/seller/screens/sales.dart';
-import 'package:quicklinker/providers/user_provider.dart';
+import 'package:QuickLinker/features/auth/services/auth_service.dart';
+import 'package:QuickLinker/features/orders/screens/orders.dart';
+import 'package:QuickLinker/features/profile/screens/user_profile.dart';
+import 'package:QuickLinker/features/profile/widgets/profile_item.dart';
+import 'package:QuickLinker/features/seller/screens/sales.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/theme.dart';
 import 'package:provider/provider.dart';
 
 class Account extends StatelessWidget {

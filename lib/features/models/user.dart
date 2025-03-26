@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-import 'package:quicklinker/features/models/cart_item.dart';
-import 'package:quicklinker/features/models/profile.dart';
+import 'package:QuickLinker/features/models/cart_item.dart';
+import 'package:QuickLinker/features/models/profile.dart';
 
 class User {
   final String email;

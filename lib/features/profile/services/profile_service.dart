@@ -6,11 +6,11 @@ import 'dart:io';
 import 'package:cloudinary_public/cloudinary_public.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:quicklinker/constants.dart';
-import 'package:quicklinker/features/models/profile.dart';
-import 'package:quicklinker/features/models/user.dart';
-import 'package:quicklinker/providers/user_provider.dart';
-import 'package:quicklinker/utils.dart';
+import 'package:QuickLinker/constants.dart';
+import 'package:QuickLinker/features/models/profile.dart';
+import 'package:QuickLinker/features/models/user.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
+import 'package:QuickLinker/utils.dart';
 import 'package:provider/provider.dart';
 
 class ProfileService {

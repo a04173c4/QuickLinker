@@ -1,6 +1,6 @@
 {
-    "name": "quicklinker",
-    "short_name": "quicklinker",
+    "name": "QuickLinker",
+    "short_name": "QuickLinker",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

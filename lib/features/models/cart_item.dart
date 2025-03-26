@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:quicklinker/features/models/product.dart';
+import 'package:QuickLinker/features/models/product.dart';
 
 class CartItem {
   final Product product;

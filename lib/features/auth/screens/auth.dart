@@ -1,4 +1,4 @@
-// import 'package:quicklinker/features/auth/services/auth_service.dart';
+// import 'package:QuickLinker/features/auth/services/auth_service.dart';
 // import 'package:flutter/material.dart';
 
 // class Auth extends StatefulWidget {

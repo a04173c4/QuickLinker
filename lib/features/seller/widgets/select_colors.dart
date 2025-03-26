@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quicklinker/constants.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/constants.dart';
+import 'package:QuickLinker/theme.dart';
 
 class SelectColors extends StatefulWidget {
   final List<String> items;

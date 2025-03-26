@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quicklinker/constants.dart';
-import 'package:quicklinker/features/home/screens/products_by_category.dart';
-import 'package:quicklinker/features/search/screens/search.dart';
-import 'package:quicklinker/features/search/widgets/search_field.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/constants.dart';
+import 'package:QuickLinker/features/home/screens/products_by_category.dart';
+import 'package:QuickLinker/features/search/screens/search.dart';
+import 'package:QuickLinker/features/search/widgets/search_field.dart';
+import 'package:QuickLinker/theme.dart';
 
 class Categories extends StatefulWidget {
   const Categories({super.key});

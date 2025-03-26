@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "quicklinker" "\0"
+            VALUE "FileDescription", "QuickLinker" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "quicklinker" "\0"
+            VALUE "InternalName", "QuickLinker" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "quicklinker.exe" "\0"
-            VALUE "ProductName", "quicklinker" "\0"
+            VALUE "OriginalFilename", "QuickLinker.exe" "\0"
+            VALUE "ProductName", "QuickLinker" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

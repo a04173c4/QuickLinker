@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:quicklinker/features/common/widgets/splash.dart';
-import 'package:quicklinker/providers/user_provider.dart';
-import 'package:quicklinker/router.dart';
-import 'package:quicklinker/theme.dart';
+import 'package:QuickLinker/features/common/widgets/splash.dart';
+import 'package:QuickLinker/providers/user_provider.dart';
+import 'package:QuickLinker/router.dart';
+import 'package:QuickLinker/theme.dart';
 import 'package:provider/provider.dart';
 
 void main() {

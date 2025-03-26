@@ -1,5 +1,5 @@
-import 'package:quicklinker/features/models/profile.dart';
-import 'package:quicklinker/features/models/user.dart';
+import 'package:QuickLinker/features/models/profile.dart';
+import 'package:QuickLinker/features/models/user.dart';
 import 'package:flutter/material.dart';
 
 class UserProvider extends ChangeNotifier {

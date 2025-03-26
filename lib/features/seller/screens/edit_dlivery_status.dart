@@ -1,8 +1,8 @@
 // ignore_for_file: use_build_context_synchronously
 import 'package:flutter/material.dart';
-import 'package:quicklinker/features/models/order.dart';
-import 'package:quicklinker/features/products/services/product_details_service.dart';
-import 'package:quicklinker/features/seller/services/seller_service.dart';
+import 'package:QuickLinker/features/models/order.dart';
+import 'package:QuickLinker/features/products/services/product_details_service.dart';
+import 'package:QuickLinker/features/seller/services/seller_service.dart';
 
 class EditDliveryStatus extends StatefulWidget {
   const EditDliveryStatus({super.key, required this.order});

@@ -1,7 +1,7 @@
-import 'package:quicklinker/features/models/cart_item.dart';
-import 'package:quicklinker/features/models/product.dart';
-import 'package:quicklinker/features/products/screens/product_details.dart';
-import 'package:quicklinker/features/wishlist/services/wishlist_service.dart';
+import 'package:QuickLinker/features/models/cart_item.dart';
+import 'package:QuickLinker/features/models/product.dart';
+import 'package:QuickLinker/features/products/screens/product_details.dart';
+import 'package:QuickLinker/features/wishlist/services/wishlist_service.dart';
 import 'package:flutter/material.dart';
 
 class WishlistItem extends StatefulWidget {
