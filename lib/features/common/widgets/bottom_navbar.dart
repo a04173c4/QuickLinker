@@ -5,6 +5,7 @@ import 'package:QuickLinker/features/products/screens/cart.dart';
 import 'package:QuickLinker/features/profile/screens/account.dart';
 import 'package:QuickLinker/features/wishlist/screens/wishlist.dart';
 import 'package:QuickLinker/providers/user_provider.dart';
+import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
@@ -39,159 +40,53 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-    final cartLength = context.watch<UserProvider>().user.cart.length;
-    final wishlistLength = context.watch<UserProvider>().user.wishlist.length;
+
+    bool light = Theme.of(context).brightness == Brightness.light;
+    
     return Scaffold(
       body: pages[_page],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _page,
-        selectedItemColor: teal,
-        unselectedItemColor: unselectedNavBarColor,
-        backgroundColor: backgroundColor,
+      bottomNavigationBar: FlashyTabBar(
+        selectedIndex: _page,
+        backgroundColor: light ? Colors.white : Colors.grey[900], 
         iconSize: 28,
-        onTap: updatePage,
+        onItemSelected: (index) => setState(() {
+          _page = index;
+        }),
         items: [
-          BottomNavigationBarItem(
-            icon: Container(
-              width: bottomNavBarWidth,
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: _page == 0
-                        ? selectedNavBarColor
-                        : Theme.of(context).brightness == Brightness.light
-                            ? white
-                            : lightAsh,
-                    width: bottomNavBarBorderWidth,
-                  ),
-                ),
-              ),
-              child: Icon(
-                Icons.home_outlined,
-                color: _page == 0
-                    ? teal
-                    : Theme.of(context).brightness == Brightness.light
-                        ? black
-                        : lightAsh,
-              ),
+          FlashyTabBarItem(
+            icon: const Icon(
+              Icons.home_outlined,
+              color: teal,
             ),
-            label: '',
+            title: Text('الرئيسية', style: TextStyle(color: teal),),
           ),
-          BottomNavigationBarItem(
-            icon: Container(
-              width: bottomNavBarWidth,
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: _page == 1
-                        ? selectedNavBarColor
-                        : Theme.of(context).brightness == Brightness.light
-                            ? white
-                            : lightAsh,
-                    width: bottomNavBarBorderWidth,
-                  ),
-                ),
-              ),
-              child: Icon(
-                Icons.grid_view,
-                color: _page == 1
-                    ? teal
-                    : Theme.of(context).brightness == Brightness.light
-                        ? black
-                        : lightAsh,
-              ),
+          FlashyTabBarItem(
+            icon: const Icon(
+              Icons.grid_view,
+              color: teal,
             ),
-            label: '',
+            title: Text('الفئات'),
           ),
-          BottomNavigationBarItem(
-            icon: Container(
-              width: bottomNavBarWidth,
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: _page == 2
-                        ? selectedNavBarColor
-                        : Theme.of(context).brightness == Brightness.light
-                            ? white
-                            : lightAsh,
-                    width: bottomNavBarBorderWidth,
-                  ),
-                ),
-              ),
-              child: badges.Badge(
-                badgeStyle: const badges.BadgeStyle(
-                  badgeColor: teal,
-                ),
-                badgeContent: Text(cartLength.toString()),
-                child: Icon(
-                  Icons.favorite_border,
-                  color: _page == 2
-                      ? teal
-                      : Theme.of(context).brightness == Brightness.light
-                          ? black
-                          : lightAsh,
-                ),
-              ),
+          FlashyTabBarItem(
+            icon: const Icon(
+              Icons.favorite_border,
+              color: teal,
             ),
-            label: '',
+            title: Text('المفضلة'),
           ),
-          BottomNavigationBarItem(
-            icon: Container(
-              width: bottomNavBarWidth,
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: _page == 3
-                        ? selectedNavBarColor
-                        : Theme.of(context).brightness == Brightness.light
-                            ? white
-                            : lightAsh,
-                    width: bottomNavBarBorderWidth,
-                  ),
-                ),
-              ),
-              child: badges.Badge(
-                badgeStyle: const badges.BadgeStyle(
-                  badgeColor: teal,
-                ),
-                badgeContent: Text(cartLength.toString()),
-                child: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: _page == 3
-                      ? teal
-                      : Theme.of(context).brightness == Brightness.light
-                          ? black
-                          : lightAsh,
-                ),
-              ),
+          FlashyTabBarItem(
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+              color: teal,
             ),
-            label: '',
+            title: Text('السلة'),
           ),
-          BottomNavigationBarItem(
-            icon: Container(
-              width: bottomNavBarWidth,
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: _page == 4
-                        ? selectedNavBarColor
-                        : Theme.of(context).brightness == Brightness.light
-                            ? white
-                            : lightAsh,
-                    width: bottomNavBarBorderWidth,
-                  ),
-                ),
-              ),
-              child: Icon(
-                Icons.person_outline_outlined,
-                color: _page == 4
-                    ? teal
-                    : Theme.of(context).brightness == Brightness.light
-                        ? black
-                        : lightAsh,
-              ),
+          FlashyTabBarItem(
+            icon: const Icon(
+              Icons.person_outline_outlined,
+              color: teal,
             ),
-            label: '',
+            title: Text('الإعدادات'),
           ),
         ],
       ),
