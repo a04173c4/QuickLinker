@@ -42,12 +42,12 @@ class CartItem {
       amount: map['amount'] as int,
     );
     print("IS PROBLEM FROM THE NEWLY ADDED FIELDS?");
-
+    print('Received img data: ${map['product']['img']}');
+    print('Parsed img list: ${testItem.product.img}');
     return testItem;
   }
 
   String toJson() => json.encode(toMap());
-
   factory CartItem.fromJson(String source) =>
       CartItem.fromMap(json.decode(source) as Map<String, dynamic>);
 

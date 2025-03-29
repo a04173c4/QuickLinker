@@ -26,18 +26,26 @@ class SellerService {
       List<String> selectedSizes = const [],
       List<String> selectedColors = const []}) async {
     final userProvider = Provider.of<UserProvider>(context, listen: false);
+    print("TOKEN: ${userProvider.user.token}");
     try {
       if (images.isNotEmpty) {}
+      print(1);
       List<String> imgUrls = [];
-      final cloudinary = CloudinaryPublic('dvsd4zjxf', 'ztkl4b1w');
+      print(2);
+      final cloudinary =
+          CloudinaryPublic('dwxdeaqqk', 'preset-for-file-upload');
+      print(3);
       for (int i = 0; i < images.length; i++) {
+        print(4);
+        print(images[i].path);
         CloudinaryResponse response = await cloudinary.uploadFile(
           CloudinaryFile.fromFile(images[i].path,
               resourceType: CloudinaryResourceType.Image, folder: name),
         );
-
+        print(5);
         imgUrls.add(response.secureUrl);
       }
+      print("TOKEN: ${userProvider.user.token}");
       http.Response response = await http.post(
         Uri.parse('$productsUri/product/create'),
         headers: {
@@ -69,6 +77,7 @@ class SellerService {
           });
     } catch (e) {
       showSnackBar(context, e.toString());
+      print("MEOWWWW");
     }
   }
 
@@ -143,7 +152,8 @@ class SellerService {
       http.Response? response;
       List<String> imgUrls = [];
       if (images != null) {
-        final cloudinary = CloudinaryPublic('dvsd4zjxf', 'ztkl4b1w');
+        final cloudinary =
+            CloudinaryPublic('dwxdeaqqk', 'preset-for-file-upload');
         for (int i = 0; i < images.length; i++) {
           CloudinaryResponse response = await cloudinary.uploadFile(
             CloudinaryFile.fromFile(images[i].path,

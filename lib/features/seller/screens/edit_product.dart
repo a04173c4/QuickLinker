@@ -26,7 +26,7 @@ class _EditProductState extends State<EditProduct> {
   final TextEditingController descriptionController = TextEditingController();
   final SellerService sellerService = SellerService();
   List<String> selectedSizes = [];
-  String selectedtype = 'Electronics';
+  String selectedtype = 'الكترونيات';
   List<File> selectedImages = [];
   List<String> selectedColors = [];
 
@@ -227,87 +227,87 @@ class _EditProductState extends State<EditProduct> {
                 hint: const Text('أختر نوع المنتج'),
                 items: const [
                   DropdownMenuItem(
-                    value: 'Electronics',
+                    value: 'الكترونيات',
                     child: Text('الكترونيات'),
                   ),
                   DropdownMenuItem(
-                    value: 'Fashion',
+                    value: 'موضة',
                     child: Text('موضة'),
                   ),
                   DropdownMenuItem(
-                    value: 'Home and Kitchen',
-                    child: Text('أدوات منزلية والمطبخ'),
+                    value: 'منزل ومطبخ',
+                    child: Text('منزل ومطبخ'),
                   ),
                   DropdownMenuItem(
-                    value: 'Health and Personal Care',
-                    child: Text('الصحة والعناية الشخصية'),
+                    value: 'صحة وعناية شخصية',
+                    child: Text('صحة وعناية شخصية'),
                   ),
                   DropdownMenuItem(
-                    value: 'Books and Stationery',
-                    child: Text('الكتب والقرطاسية'),
+                    value: 'كتب وقرطاسية',
+                    child: Text('كتب وقرطاسية'),
                   ),
                   DropdownMenuItem(
-                    value: 'Sports and Outdoors',
+                    value: 'رياضية',
                     child: Text('رياضية'),
                   ),
                   DropdownMenuItem(
-                    value: 'Toys and Games',
-                    child: Text('ألعاب'),
+                    value: 'العاب',
+                    child: Text('العاب'),
                   ),
                   DropdownMenuItem(
-                    value: 'Beauty and Cosmetics',
-                    child: Text('الجمال ومستحضرات التجميل'),
+                    value: 'تجميل ومستحضرات',
+                    child: Text('تجميل ومستحضرات'),
                   ),
                   DropdownMenuItem(
-                    value: 'Automotive',
-                    child: Text('السيارات'),
+                    value: 'سيارات',
+                    child: Text('سيارات'),
                   ),
                   DropdownMenuItem(
-                    value: 'Jewelry and Accessories',
-                    child: Text('المجوهرات والإكسسوارات'),
+                    value: 'مجوهرات واكسسوارات',
+                    child: Text('مجوهرات واكسسوارات'),
                   ),
                   DropdownMenuItem(
-                    value: 'Groceries and Food',
-                    child: Text('البقالة والطعام'),
+                    value: 'بقالة وطعام',
+                    child: Text('بقالة وطعام'),
                   ),
                   DropdownMenuItem(
-                    value: 'Baby Products',
-                    child: Text('منتجات أطفال'),
+                    value: 'منتجات اطفال',
+                    child: Text('منتجات اطفال'),
                   ),
                   DropdownMenuItem(
-                    value: 'Pet Supplies',
-                    child: Text('مستلزمات الحيوانات الأليفة'),
+                    value: 'مستلزمات حيوانات اليفة',
+                    child: Text('مستلزمات حيوانات اليفة'),
                   ),
                   DropdownMenuItem(
-                    value: 'Tools and Hardware',
-                    child: Text('الأدوات والأجهزة'),
+                    value: 'ادوات وعدد',
+                    child: Text('ادوات وعدد'),
                   ),
                   DropdownMenuItem(
-                    value: 'Office Supplies',
-                    child: Text('اللوازم المكتبية'),
+                    value: 'قرطاسية مكتبية',
+                    child: Text('قرطاسية مكتبية'),
                   ),
                   DropdownMenuItem(
-                    value: 'Musical Instruments',
-                    child: Text('الآلات الموسيقية'),
+                    value: 'الات موسيقية',
+                    child: Text('الات موسيقية'),
                   ),
                   DropdownMenuItem(
-                    value: 'Furniture',
-                    child: Text('أثاث'),
+                    value: 'اثاث',
+                    child: Text('اثاث'),
                   ),
                   DropdownMenuItem(
-                    value: 'Art and Craft',
-                    child: Text('الفنون والحرف اليدوية'),
+                    value: 'فنون وحرف',
+                    child: Text('فنون وحرف'),
                   ),
                   DropdownMenuItem(
-                    value: 'Industrial and Scientific',
-                    child: Text('الصناعية والعلمية'),
+                    value: 'صناعة وعلوم',
+                    child: Text('صناعة وعلوم'),
                   ),
                   DropdownMenuItem(
-                    value: 'Video Games and Consoles',
-                    child: Text('ألعاب الفيديو وأجهزة التحكم'),
+                    value: 'العاب فيديو',
+                    child: Text('العاب فيديو'),
                   ),
                   DropdownMenuItem(
-                    value: 'Music',
+                    value: 'موسيقى',
                     child: Text('موسيقى'),
                   ),
                 ],

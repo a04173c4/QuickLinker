@@ -78,84 +78,103 @@ class _CartProductState extends State<CartProduct> {
     colors!.isEmpty ? null : mapItemColors();
     return Column(
       children: [
-        Container(
-          margin: const EdgeInsets.symmetric(
-            horizontal: 10,
-          ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network(
-                cartItem.product.img.isNotEmpty == true
-                    ? cartItem.product.img[0]
-                    : 'https://via.placeholder.com/150',
-                fit: BoxFit.contain,
-                height: 135,
-                width: 135,
+              // Image Container
+              Container(
+                margin: const EdgeInsetsDirectional.only(end: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Image.network(
+                  cartItem.product.img.isNotEmpty
+                      ? cartItem.product.img[0]
+                      : 'https://placehold.co/150',
+                  fit: BoxFit.contain,
+                  height: 135,
+                  width: 135,
+                ),
               ),
-              Column(
-                children: [
-                  Container(
-                    width: 235,
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      cartItem.product.name,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'OdinRounded',
+
+              // Product Info
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Product Name
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        cartItem.product.name,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'OdinRounded',
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
-                      maxLines: 2,
                     ),
-                  ),
-                  Container(
-                    width: 235,
-                    padding: const EdgeInsets.only(left: 10, top: 5),
-                    child: Text(
-                      '\$${cartItem.product.price}',
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+
+                    // Price
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        '\$${cartItem.product.price}',
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      maxLines: 2,
                     ),
-                  ),
-                  Container(
-                    width: 235,
-                    padding: const EdgeInsets.only(left: 10, top: 5),
-                    child: Text(
-                      colors!.isNotEmpty
-                          ? 'الألوان: $result'
-                          : "${cartItem.amount} في السلة",
-                      style: const TextStyle(
-                        color: Colors.teal,
+
+                    // Colors/Quantity
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        colors!.isNotEmpty
+                            ? 'الألوان: $result'
+                            : "${cartItem.amount} في السلة",
+                        style: const TextStyle(
+                          color: Colors.teal,
+                        ),
                       ),
-                      maxLines: 2,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
         ),
-        Row(
-          children: [
-            const Spacer(),
-            ElevatedButton(
-              onPressed: () async {
-                // editCart(cartItem.product, false);
-                Product product = await productDetailsService.getProduct(
-                    cartItem.product.id, context);
-                Navigator.of(context)
-                    .pushNamed(ProductDetails.routeName, arguments: product);
-              },
-              child: const Text('تعديل'),
-            ),
-            IconButton(
-              onPressed: () {
-                editCart(cartItem.product, true);
-              },
-              icon: const Icon(Icons.delete, color: Colors.red),
-            ),
-          ],
+
+        // Buttons Row
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Flexible(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    Product product = await productDetailsService.getProduct(
+                        cartItem.product.id, context);
+                    Navigator.of(context).pushNamed(
+                      ProductDetails.routeName,
+                      arguments: product,
+                    );
+                  },
+                  child: const Text('تعديل'),
+                ),
+              ),
+              const SizedBox(width: 8),
+              IconButton(
+                icon: const Icon(Icons.delete, color: Colors.red),
+                onPressed: () => editCart(cartItem.product, true),
+              ),
+            ],
+          ),
         ),
       ],
     );

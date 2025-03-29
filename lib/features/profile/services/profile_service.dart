@@ -28,7 +28,8 @@ class ProfileService {
     http.Response response;
     try {
       if (img != null) {
-        final cloudinary = CloudinaryPublic('dvsd4zjxf', 'ztkl4b1w');
+        final cloudinary =
+            CloudinaryPublic('dwxdeaqqk', 'preset-for-file-upload');
         CloudinaryResponse cloudinaryResponse = await cloudinary.uploadFile(
           CloudinaryFile.fromFile(img.path,
               resourceType: CloudinaryResourceType.Image, folder: name),

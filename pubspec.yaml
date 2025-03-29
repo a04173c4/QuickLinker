@@ -51,6 +51,7 @@ dependencies:
   country_picker: ^2.0.27
   flutter_stripe: ^11.4.0
   flashy_tab_bar2: ^0.0.10
+  flutter_native_splash: ^2.4.5
   
 dev_dependencies:
   flutter_test:

@@ -3,7 +3,6 @@ import 'dart:convert';
 
 class Product {
   final String id;
-
   final String name;
   final String desc;
   final List<String> img;

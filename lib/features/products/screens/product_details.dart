@@ -63,67 +63,78 @@ class _ProductDetailsState extends State<ProductDetails> {
   }
 
   void addToCart() {
+  print('🐛 [addToCart] Starting addToCart function');
+  print('🖼️ [addToCart] Product image URLs: ${widget.product.img}');
+  print('🧮 [addToCart] Initial quantity: $quantity');
+  print('🎨 [addToCart] Selected colors: $selectedColors');
+  print('📏 [addToCart] Selected sizes: $selectedSizes');
+
+  try {
     if (widget.product.sizes.isEmpty && widget.product.colors.isEmpty) {
+      print('🚀 [addToCart] Case 1: No sizes/colors - direct add');
       productDetailsService.editCart(
-          context: context, product: widget.product, amount: quantity);
-    } else if (widget.product.sizes.isNotEmpty &&
-        widget.product.colors.isEmpty) {
+        context: context,
+        product: widget.product.copyWith(img: widget.product.img), // Ensure img is passed
+        amount: quantity,
+      );
+    } else if (widget.product.sizes.isNotEmpty && widget.product.colors.isEmpty) {
+      print('🔍 [addToCart] Case 2: Size selection required');
       if (quantity == selectedSizes.length) {
+        print('✅ [addToCart] Sizes match quantity - proceeding');
         productDetailsService.editCart(
-            context: context,
-            product: widget.product,
-            amount: quantity,
-            selectedSizes: selectedSizes);
-      } else {
-        showDialog(
           context: context,
-          builder: (context) {
-            return const SelectSizesDialog();
-          },
+          product: widget.product.copyWith(img: widget.product.img),
+          amount: quantity,
+          selectedSizes: selectedSizes,
         );
+      } else {
+        print('⚠️ [addToCart] Size quantity mismatch - showing dialog');
+        showDialog(context: context, builder: (_) => const SelectSizesDialog());
       }
-    } else if (widget.product.sizes.isEmpty &&
-        widget.product.colors.isNotEmpty) {
+    } else if (widget.product.sizes.isEmpty && widget.product.colors.isNotEmpty) {
+      print('🎨 [addToCart] Case 3: Color selection required');
       if (quantity == selectedColors.length) {
+        print('✅ [addToCart] Colors match quantity - proceeding');
         productDetailsService.editCart(
-            context: context,
-            product: widget.product,
-            amount: quantity,
-            selectedColors: selectedColors);
-      } else {
-        showDialog(
           context: context,
-          builder: (context) {
-            return const SelectColorsDialog();
-          },
+          product: widget.product.copyWith(img: widget.product.img),
+          amount: quantity,
+          selectedColors: selectedColors,
         );
+      } else {
+        print('⚠️ [addToCart] Color quantity mismatch - showing dialog');
+        showDialog(context: context, builder: (_) => const SelectColorsDialog());
       }
     } else {
-      if (quantity == selectedColors.length &&
-          quantity == selectedSizes.length) {
+      print('📏🎨 [addToCart] Case 4: Both sizes/colors required');
+      if (quantity == selectedColors.length && quantity == selectedSizes.length) {
+        print('✅ [addToCart] Both selections valid - proceeding');
         productDetailsService.editCart(
-            context: context,
-            product: widget.product,
-            amount: quantity,
-            selectedColors: selectedColors,
-            selectedSizes: selectedSizes);
-      } else if (quantity == selectedColors.length) {
-        showDialog(
           context: context,
-          builder: (context) {
-            return const SelectSizesDialog();
-          },
+          product: widget.product.copyWith(img: widget.product.img),
+          amount: quantity,
+          selectedColors: selectedColors,
+          selectedSizes: selectedSizes,
         );
       } else {
-        showDialog(
-          context: context,
-          builder: (context) {
-            return const SelectColorsDialog();
-          },
-        );
+        print('⚠️ [addToCart] Selection mismatch - showing dialogs');
+        if (quantity != selectedColors.length) {
+          showDialog(context: context, builder: (_) => const SelectColorsDialog());
+        }
+        if (quantity != selectedSizes.length) {
+          showDialog(context: context, builder: (_) => const SelectSizesDialog());
+        }
       }
     }
+    print('✅ [addToCart] Add to cart flow completed successfully');
+  } catch (e, stack) {
+    print('❌ [addToCart] Error in addToCart: $e');
+    print('🔍 [addToCart] Stack trace: $stack');
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Failed to add to cart: ${e.toString()}')),
+    );
   }
+}
 
   void addToWishlist() {
     print("adding to wishlist");
